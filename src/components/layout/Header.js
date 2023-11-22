@@ -16,7 +16,7 @@ const Header = () => {
         </ul>
       </div>
       <div className={styles.login}>
-        <Link href="/signin">
+        <Link href="/signup">
           <FiLogIn />
           <span>ورود</span>
         </Link>
