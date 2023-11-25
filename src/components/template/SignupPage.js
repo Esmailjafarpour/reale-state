@@ -10,18 +10,19 @@ import styles from "@/template/SignupPage.module.css";
 const SignupPage = () => {
 
      const [state, setAllState] = useState({
-          email : "",
-          password : "",
-          rePassword : "",
+          email : "naderjafarpour@gmail.com",
+          password : "123",
+          rePassword : "123",
           loading : false
      });
 
      const router = useRouter()
 
-     const signupHandler = async (e) => {
-          e.preventDefault();
+     const signupHandler = async (event) => {
+          event.preventDefault();
           if (state.password !== state.rePassword) {
-               toast.error("رمز عبور و تکرار آن با هم برابر نیست")
+               toast.error("رمز عبور و تکرار آن با هم برابر نیست") 
+               return;
           }
           setAllState({
                ...state,
