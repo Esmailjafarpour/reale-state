@@ -3,10 +3,11 @@ import { useState } from "react";
 import TextInput from "@/module/TextInput";
 import RadioList from "@/module/RadioList";
 import TextList from "@/module/TextList";
+import CustomDatePicker from "@/module/CustomDatePicker";
 import styles from "@/template/AddProfilePage.module.css";
 
 const AddProfilePage = () => {
-  const [profileData , setProfileData] = useState({
+  const [profileData, setProfileData] = useState({
     title: "",
     description: "",
     location: "",
@@ -20,8 +21,8 @@ const AddProfilePage = () => {
   });
 
   const submitHandler = () => {
-     console.log(profileData)
-  }
+    console.log(profileData);
+  };
   return (
     <div className={styles.container}>
       <h3>ثبت آگهی</h3>
@@ -62,10 +63,23 @@ const AddProfilePage = () => {
         profileData={profileData}
         setProfileData={setProfileData}
       />
-      <RadioList profileData={profileData} setProfileData={setProfileData}/>
-      <TextList title="امکانات رفاهی" profileData={profileData} setProfileData={setProfileData} type="rules"/>
-      <TextList title="قوانین" profileData={profileData} setProfileData={setProfileData} type="amenities"/>
-      <button className={styles.submit} onClick={submitHandler}>ثبت آگهی</button>
+      <RadioList profileData={profileData} setProfileData={setProfileData} />
+      <TextList
+        title="امکانات رفاهی"
+        profileData={profileData}
+        setProfileData={setProfileData}
+        type="rules"
+      />
+      <TextList
+        title="قوانین"
+        profileData={profileData}
+        setProfileData={setProfileData}
+        type="amenities"
+      />
+      <CustomDatePicker profileData={profileData} setProfileData={setProfileData}/>
+      <button className={styles.submit} onClick={submitHandler}>
+        ثبت آگهی
+      </button>
     </div>
   );
 };
