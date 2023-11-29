@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
-import Types from "mongoose";
+import { Types } from "mongoose";
 import connectDB from "@/utils/connectDB";
 import Profile from "@/models/Profile";
-import User from "@/models/Profile";
+import User from "@/models/User";
 
-async function POST(req) {
+
+export async function POST(req) {
   try {
     await connectDB();
     const body = await req.json();
@@ -33,6 +34,7 @@ async function POST(req) {
     }
 
     const user = await User.findOne({ email: session.user.email });
+    console.log("user", user);
     if (!user) {
       return NextResponse.json(
         { error: "لطفا حساب کاربری خود را ایجاد کنید" },
@@ -61,12 +63,12 @@ async function POST(req) {
       description,
       location,
       phone,
-      price: +price,
       realState,
       constructionDate,
       category,
       rules,
       amenities,
+      price: +price,
       userId: new Types.ObjectId(user._id),
     });
     console.log("newProfile", newProfile);
@@ -76,7 +78,7 @@ async function POST(req) {
       { status: 201 }
     );
   } catch (error) {
-    console.log("error from profile api");
+    console.log("error from profile api", error);
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }
