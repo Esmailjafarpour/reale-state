@@ -1,9 +1,9 @@
 "use client";
-import Link from "next/link";
 import { useState , useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Toaster , toast } from "react-hot-toast";
-import { ThreeDots  } from  'react-loader-spinner'
+import Link from "next/link";
+import Loader from "@/module/Loader";
 import FormInput from "@/module/FormInput";
 import styles from "@/template/SignupPage.module.css";
 
@@ -81,16 +81,7 @@ const SignupPage = () => {
                     })}  
                />    
                {state.loading ? 
-                    <ThreeDots 
-                         height="80" 
-                         width="80" 
-                         radius="9"
-                         color="#304ffe" 
-                         ariaLabel="three-dots-loading"
-                         wrapperStyle={{margin :"auto"}}
-                         wrapperClassName=""
-                         visible={state.loading}
-                    />
+                    <Loader loading={state.loading}/>
                : <button type="submit" onClick={signupHandler}>ثبت نام</button>} 
                
              </form>  

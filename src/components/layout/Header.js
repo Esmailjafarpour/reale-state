@@ -16,7 +16,7 @@ const Header = () => {
             <Link href="/">صفحه ی اصلی</Link>
           </li>
           <li>
-            <Link href="/buy-residential">صفحه ی اصلی</Link>
+            <Link href="/buy-residential">آگهی ها</Link>
           </li>
         </ul>
       </div>

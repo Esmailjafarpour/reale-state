@@ -1,14 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState , useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Toaster, toast } from "react-hot-toast";
-import { ThreeDots } from "react-loader-spinner";
 import TextInput from "@/module/TextInput";
 import RadioList from "@/module/RadioList";
 import TextList from "@/module/TextList";
 import CustomDatePicker from "@/module/CustomDatePicker";
+import Loader from "@/module/Loader";
 import styles from "@/template/AddProfilePage.module.css";
 
-const AddProfilePage = () => {
+const AddProfilePage = ({ data }) => {
   const [profileData, setProfileData] = useState({
     title: "",
     description: "",
@@ -22,7 +23,14 @@ const AddProfilePage = () => {
     amenities: [],
   });
 
+  useEffect(() => {
+   if (data) {
+     setProfileData(data)
+   }
+  }, []);
+
   const [loading, setLoading] = useState(false);
+  const router = useRouter()
 
   const submitHandler = async () => {
     setLoading(true);
@@ -40,11 +48,34 @@ const AddProfilePage = () => {
     } else {
       console.log("success", data);
       toast.success(data.message);
+      router.refresh();
+      router.replace("/dashboard/my-profiles")
     }
   };
+
+  const editHandler = async () => {
+      setLoading(true)
+      const res = await fetch("/api/profile",{
+        method : "PATCH",
+        body : JSON.stringify(profileData),
+        headers : {"Content-Type" : "application/json"}
+      })
+      console.log(res)
+      const data = await res.json();
+      console.log(data)
+      setLoading(false)
+      if (data.error) {
+        toast.error(data.error)
+      } else {
+        toast.success(data.message)
+        router.refresh();
+        router.replace("/dashboard/my-profiles")
+      }
+  }
+   
   return (
     <div className={styles.container}>
-      <h3>ثبت آگهی</h3>
+      <h3>{data ? "ویرایش آگهی" : "ثبت آگهی"}</h3>
       <TextInput
         title="عنوان آگهی"
         name="title"
@@ -101,16 +132,11 @@ const AddProfilePage = () => {
       />
       <Toaster />
       {loading ? (
-        <ThreeDots 
-        height="80" 
-        width="80" 
-        radius="9"
-        color="#304ffe" 
-        ariaLabel="three-dots-loading"
-        wrapperStyle={{margin :"auto"}}
-        wrapperClassName=""
-        visible={loading}
-        />
+        <Loader loading={loading} />
+      ) : data ? (
+        <button className={styles.submit} onClick={editHandler}>
+           ویرایش آگهی
+        </button>
       ) : (
         <button className={styles.submit} onClick={submitHandler}>
           ثبت آگهی
