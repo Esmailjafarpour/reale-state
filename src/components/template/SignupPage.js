@@ -81,7 +81,7 @@ const SignupPage = () => {
                     })}  
                />    
                {state.loading ? 
-                    <Loader loading={state.loading}/>
+                    <Loader loading={state.loading} color="#304ffe"/>
                : <button type="submit" onClick={signupHandler}>ثبت نام</button>} 
                
              </form>  

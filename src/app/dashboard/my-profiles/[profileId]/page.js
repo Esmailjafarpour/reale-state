@@ -9,7 +9,7 @@ const Edit = async ({params : {profileId}}) => {
      console.log("profileeeeee",JSON.parse(JSON.stringify(profile)))
      return (
           <div>
-                 <AddProfilePage data={JSON.parse(JSON.stringify(profile))}/>
+               <AddProfilePage data={JSON.parse(JSON.stringify(profile))}/>
           </div>
      );
 }

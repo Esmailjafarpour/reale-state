@@ -5,6 +5,22 @@ import connectDB from "@/utils/connectDB";
 import Profile from "@/models/Profile";
 import User from "@/models/User";
 
+
+export async function GET(req){
+
+  try {
+    await connectDB();
+    const profile = await Profile.find().select("-userId");
+    return NextResponse.json(
+      { message: "آگهی جدید اضافه شد" , data : profile },
+      { status: 201 , data : profile }
+    );
+  } catch (error) {
+    console.log("error from Get api",error)
+    return NextResponse.json({error : "مشکلی در سرور رخ داده است"},{status : 500})
+  }
+}
+
 export async function POST(req) {
   try {
     await connectDB();

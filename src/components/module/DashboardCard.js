@@ -17,12 +17,12 @@ const DashboardCard = ({ data }) => {
   };
 
   const deleteHandler = async () => {
-    setLoading(true);
+    setLoading(true)
     const res = await fetch(`/api/profile/delete/${data._id}`, {
       method: "DELETE",
     });
     const result = await res.json();
-    setLoading(false);
+    setLoading(false)
     if (result.error) {
       toast.error(result.error);
     } else {
@@ -39,16 +39,16 @@ const DashboardCard = ({ data }) => {
           ویرایش
           <FiEdit />
         </button>
-        {true ? (
+        {loading ? 
           <button>
-            <Loader loading={true} />
-          </button>
-        ) : (
+            <Loader loading={loading} color="#ec493e"/>
+        </button>
+         : 
           <button onClick={deleteHandler}>
             حذف آگهی
             <AiOutlineDelete />
           </button>
-        )}
+        }
       </div>
       <Toaster />
     </div>

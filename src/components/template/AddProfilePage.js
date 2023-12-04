@@ -43,13 +43,11 @@ const AddProfilePage = ({ data }) => {
     const data = await res.json();
     setLoading(false);
     if (data.error) {
-      console.log("error data res", data);
       toast.error(data.error);
     } else {
-      console.log("success", data);
       toast.success(data.message);
       router.refresh();
-      router.replace("/dashboard/my-profiles")
+      // router.replace("/dashboard/my-profiles");
     }
   };
 
@@ -60,16 +58,14 @@ const AddProfilePage = ({ data }) => {
         body : JSON.stringify(profileData),
         headers : {"Content-Type" : "application/json"}
       })
-      console.log(res)
       const data = await res.json();
-      console.log(data)
       setLoading(false)
       if (data.error) {
         toast.error(data.error)
       } else {
-        toast.success(data.message)
+        toast.success(data.message);
         router.refresh();
-        router.replace("/dashboard/my-profiles")
+        // router.replace("/dashboard/my-profiles");
       }
   }
    
@@ -132,7 +128,7 @@ const AddProfilePage = ({ data }) => {
       />
       <Toaster />
       {loading ? (
-        <Loader loading={loading} />
+        <Loader loading={loading} color="#304ffe"/>
       ) : data ? (
         <button className={styles.submit} onClick={editHandler}>
            ویرایش آگهی

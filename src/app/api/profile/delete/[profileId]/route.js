@@ -16,7 +16,7 @@ export async function DELETE(req , context){
 
           const user = await User.findOne({email : session.user.email});
           if (!user) {
-               return NextResponse.json({error : "حساب کاربری خود را ایجاد کنید"},{سفشفعس : 404})
+               return NextResponse.json({error : "حساب کاربری خود را ایجاد کنید"},{status : 404})
           }
 
           const profile = await Profile.findOne({_id : id});
