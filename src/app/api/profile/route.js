@@ -10,7 +10,7 @@ export async function GET(req){
 
   try {
     await connectDB();
-    const profile = await Profile.find().select("-userId");
+    const profile = await Profile.find({published : true}).select("-userId");
     return NextResponse.json(
       { message: "آگهی جدید اضافه شد" , data : profile },
       { status: 201 , data : profile }
