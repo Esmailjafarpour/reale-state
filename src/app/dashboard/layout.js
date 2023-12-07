@@ -5,6 +5,10 @@ import { connectDB } from "@/utils/connectDB";
 import User from "@/models/User";
 import DashboardSidebar from "@/layout/DashboardSidebar";
 
+
+export const metadata = {
+     title : "پنل کاربری"
+}
 const DashboardLayout = async ({children}) => {
 
      const session = await getServerSession(authOptions);

@@ -15,7 +15,7 @@ const DashboardSidebar = async ({children , role , email}) => {
                     <Link href="/dashboard">حساب کاربری</Link>
                     <Link href="/dashboard/my-profiles">آگهی های من</Link>
                     <Link href="/dashboard/add">ثبت آگهی</Link>
-                    {role === "USER" ? <Link href="/admin">در انتظار تایید</Link>: null}
+                    {role === "ADMIN" ? <Link href="/admin">در انتظار تایید</Link>: null}
                     <LogoutButton/>
                </div>
                <div className={styles.main}>{children}</div>

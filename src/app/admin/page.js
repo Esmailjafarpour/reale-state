@@ -7,12 +7,16 @@ import Profile from "@/models/Profile";
 import DashboardSidebar from "@/layout/DashboardSidebar";
 import AdminPage from "@/template/AdminPage";
 
+export const metadata = {
+  title : "Admin پنل"
+}
+
 const Admin = async () => {
   await connectDB();
   const session = await getServerSession(authOptions);
   if (!session) redirect("/signin");
   const user = await User.findOne({ email: session.user.email });
-  if (user.role !== "USER") redirect("/dashboard");
+  if (user.role !== "ADMIN") redirect("/dashboard");
   const profiles = await Profile.find({published : false})
   return (
     <DashboardSidebar role={user.role} email={user.email}>
