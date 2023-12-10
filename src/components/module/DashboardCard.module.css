@@ -1,8 +1,8 @@
 .container {
-     display: flex;
-     border: 2px solid #304ffe58;
-     border-radius: 15px;
-     margin-bottom: 20px;
+  display: flex;
+  border: 2px solid #ffffff58;
+  border-radius: 15px;
+  margin-bottom: 20px;
    }
    
    .main {
@@ -18,7 +18,7 @@
      justify-content: center;
      align-items: center;
      width: 48%;
-     background-color: #fff;
+     background-color: rgb(232 243 229 / 93%);
      cursor: pointer;
      height: 40px;
      border-radius: 8px;
@@ -38,4 +38,5 @@
    .main button:last-child {
      border: 1px solid #db0505;
      color: #db0505;
+     background-color: #cfaaaa;
    }

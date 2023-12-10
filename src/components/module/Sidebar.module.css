@@ -1,20 +1,25 @@
 .container {
      display: flex;
      flex-direction: column;
+     width: 100%;
    }
    .container p {
      display: flex;
      font-size: 1.2rem;
      font-weight: 400;
+     color: #fed830;
    }
    
    .container p svg {
-     margin-left: 5px;
-     font-size: 1.3rem;
-     color: #304ffe !important;
+    margin-left: 5px;
+    font-size: 2.0rem;
+    color: #f1cd2f !important;
+    background-color: #7d6f2e;
+    padding: 6px 6px;
+    border-radius: 6px;
    }
    
    .container a {
-     color: grey;
-     margin: 5px;
+     color: rgb(255, 255, 255);
+     margin: 7px 10px;
    }

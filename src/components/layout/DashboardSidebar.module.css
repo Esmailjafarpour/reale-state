@@ -11,28 +11,28 @@
      height: fit-content;
      padding: 30px 15px;
      border-radius: 10px;
-     box-shadow: #304ffe4a 0px 4px 15px;
+     box-shadow: #ffffff 0px 2px 10px;
      margin-left: 40px;
      width: 220px;
+     background-color: #787878;
    }
    
    .sidebar svg {
      font-size: 3rem;
-     color: #304ffe;
+     color: #f7d22e;
    }
    
    .sidebar p {
-     color: grey;
+     color: #f7d22e;
      font-size: 1.1rem;
      font-weight: 400;
      margin-top: 20px;
    }
    
    .sidebar span {
-     background-color: #304ffe;
      width: 100%;
      height: 1px;
-     background-color: silver;
+     background-color: #f7d22e;
      margin-bottom: 30px;
    }
    
@@ -40,8 +40,31 @@
      margin: 5px 0;
      font-weight: 400;
      width: 100%;
+     color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
    }
    
    .main {
      width: 100%;
+   }
+
+   .main > div > h3 {
+    background-color: #787878;
+    width: 7%;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 2px solid #f7d22e;
+    color: #f7d22e;
+   }
+
+   .main > div > p {
+    background-color: #787878;
+    border-radius: 5px;
+    border: 1px solid #efefed;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    box-shadow: 0px -1px 6px 1px #a3a3a3;
    }

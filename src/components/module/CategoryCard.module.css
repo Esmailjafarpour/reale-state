@@ -1,5 +1,5 @@
 .card {
-     box-shadow: #304ffe4a 0px 4px 15px;
+     box-shadow: #fed835  0px 4px 15px;
      /* border: 2px solid #304ffe; */
      border-radius: 15px;
      overflow: hidden;
@@ -19,7 +19,7 @@
    .card p {
      font-size: 1.2rem;
      font-weight: 400;
-     color: #304ffe;
+     color: #e5c11a;
      text-align: center;
      margin: 10px 0 5px;
    }

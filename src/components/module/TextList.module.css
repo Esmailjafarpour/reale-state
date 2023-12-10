@@ -1,5 +1,6 @@
 .container {
      margin-bottom: 40px;
+     
    }
    
    .container p {
@@ -8,16 +9,17 @@
    }
    
    .container button {
-     border: none;
-     background-color: #304ffe;
-     color: #fff;
-     font-size: 1rem;
-     border-radius: 5px;
-     transition: all ease-in 0.1s;
-     cursor: pointer;
-     padding: 4px 8px;
-     display: flex;
-     margin-top: 20px;
+    border: none;
+    background-color: #f7d22f;
+    color: #080808;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all ease-in 0.1s;
+    cursor: pointer;
+    padding: 4px 8px;
+    display: flex;
+    margin-top: 20px;
    }
    
    .container button:hover {

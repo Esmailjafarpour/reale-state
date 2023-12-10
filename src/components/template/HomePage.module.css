@@ -17,6 +17,7 @@
      font-weight: 700;
      font-size: 3rem;
      margin-bottom: 30px;
+     color: #fed835;
    }
    
    .desc ul {
@@ -27,13 +28,16 @@
    }
    
    .desc li {
-     display: flex;
-     align-items: center;
-     width: 80px;
-     margin: 10px;
-     background-color: #bbdefb;
-     padding: 5px 10px;
-     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    margin: 10px;
+    background-color: #fed835;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #6c5e1c;
+    font-size: 1rem;
+    font-weight: 600;
    }
    
    .desc span {
@@ -69,16 +73,16 @@
    }
    
    .city li {
-     background-color: #bbdefb;
-     color: #304ffe;
-     font-size: 1.2rem;
-     width: 250px;
-     margin: 10px 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 10px;
-     border-radius: 10px;
+    background-color: #e5c11a;
+    color: #101010;
+    font-size: 1.2rem;
+    width: 250px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
    }
    
    .city span {
