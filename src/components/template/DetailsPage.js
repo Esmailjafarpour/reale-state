@@ -55,7 +55,9 @@ const DetailsPage = ({
             {icons[category]} {categories[category]}
           </p>
           <p>{sp(price)} تومان</p>
-          {new Date(constructionDate).toLocaleDateString("fa-IR")}
+          <p>
+            {new Date(constructionDate).toLocaleDateString("fa-IR")}
+          </p>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@
    }
    
    .main h1 {
-     color: #304ffe;
+     color: #fed830;
      font-size: 1.3rem;
      font-weight: 400;
      margin-bottom: 10px;
@@ -19,7 +19,7 @@
      align-items: flex-start;
      height: 15px;
      margin-bottom: 50px;
-     color: grey;
+     color: rgb(255, 255, 255);
    }
    
    .main span svg {
@@ -30,6 +30,7 @@
    .main p {
      text-align: justify;
      margin-bottom: 50px;
+     color: #ffffff;
    }
    
    .sidebar {
@@ -38,7 +39,7 @@
    }
    
    .sidebar div {
-     box-shadow: #304ffe4a 0px 4px 15px;
+     box-shadow: #fed835  0px 4px 15px;
      padding: 10px;
      border-radius: 10px;
      margin-bottom: 20px;
@@ -51,19 +52,20 @@
    }
    .realState svg {
      font-size: 3rem;
-     color: #304ffe;
+     color: #fed830;
      margin: 10px 0 20px;
    }
    
    .realState p {
      font-size: 1.1rem;
      font-weight: 400;
+     color :#fed830;
    }
    
    .realState span {
      display: flex;
      align-items: center;
-     color: grey;
+     color: #fed830;
      margin-top: 20px;
    }
    
@@ -71,7 +73,7 @@
      font-size: 1.4rem;
      margin: 0;
      margin-left: 5px;
-     color: grey;
+     color: #fed830;
    }
    
    .share {
@@ -91,13 +93,12 @@
    }
    
    .share button:hover {
-     color: #304ffe;
+     color: #fed830;
    }
    
    .share svg {
      margin-left: 10px;
      font-size: 1.2rem;
-     color: #304ffe;
    }
    
    .price {
@@ -109,7 +110,7 @@
    .price p {
      display: flex;
      align-items: center;
-     color: grey;
+     color: #fed830;
      margin-bottom: 20px;
      height: 20px;
    }
@@ -117,5 +118,7 @@
    .price p svg {
      font-size: 1.5rem;
      margin-left: 5px;
-     color: #304ffe;
+     color: #fed830;
    }
+
+   

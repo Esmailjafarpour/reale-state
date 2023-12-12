@@ -65,8 +65,8 @@ const SigninPage = () => {
                     })}  
                />
                {state.loading?
-                    <Loader loading={state.loading} color="#304ffe"/>
-                    :<button type="submit" onClick={signinHandler}>ورود</button>}
+                    <Loader loading={state.loading} color="#fed830"/>
+                    :<button type="submit"  onClick={signinHandler}>ورود</button>}
              </form>  
              <p>
                حساب کاربری ندارید؟
