@@ -1,3 +1,4 @@
+@import "../app/variables.module.scss";
 
 * {
   box-sizing: border-box;
@@ -13,7 +14,7 @@ body {
   overflow-x: hidden;
   margin: auto;
   padding: 0 10px;
-  background-color: #2a2929;
+  background-color: $primary-backgroundColor;
 }
 
 body {

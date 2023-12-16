@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { BiLeftArrowAlt } from "react-icons/bi";
+import { SiCodereview } from "react-icons/si";
 import { sp } from "@/utils/replaceNumber";
 import { icons } from "@/constants/icons";
-import styles from "@/module/Card.module.css";
+import styles from "@/module/Card.module.scss";
 
 const Card = ({ data: {_id , category, title, location, price } }) => {
 
@@ -18,7 +18,7 @@ const Card = ({ data: {_id , category, title, location, price } }) => {
       <span>{sp(price)} تومان</span>
       <Link href={`/buy-residential/${_id}`}>
           مشاهده ی آگهی
-        <BiLeftArrowAlt/>
+        <SiCodereview/>
       </Link>
     </div>
   );

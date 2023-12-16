@@ -1,5 +1,5 @@
 import { p2e } from "@/utils/replaceNumber";
-import styles from "@/module/TextInput.module.css";
+import styles from "@/module/TextInput.module.scss";
 
 const TextInput = ({
   title,

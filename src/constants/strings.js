@@ -1,4 +1,10 @@
-const services = ["خرید", "فروش", "رهن", "اجاره"];
+const services = {
+  buy : "خرید",
+  sale : "فروش",
+  mortgage : "رهن",
+  Rent : "اجاره"
+} 
+
 const cities = [
   "شیراز",
   "بوشهر",

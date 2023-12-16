@@ -1,4 +1,4 @@
-import './globals.css'
+import './globals.scss'
 import { yekan } from "@/utils/fonts";
 import Layout from "@/layout/Layout";
 import NextAuthProvider from "@/providers/NextAuthProvider";

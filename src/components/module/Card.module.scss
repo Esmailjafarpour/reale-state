@@ -1,0 +1,62 @@
+  @import "../../app/variables.module.scss";
+  .container {
+    width: 30%;
+    height: 215px;
+    border: 2px solid $secondary-color;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: $secondary-backgroundColor-two;
+
+    span {
+      color: $gray-color;
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: $text-secondary-color;
+
+      svg {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+   
+   .icon svg {
+     font-size: 1.8rem;
+     background-color: $secondary-backgroundColor;
+     color: $primary-color;
+     padding: 3px;
+     border-radius: 5px;
+   }
+   
+   .title {
+     font-weight: 400;
+     margin: 10px 0;
+     color: $gray-color;
+   }
+   
+   .location {
+     display: flex;
+     color: $gray-color;
+     font-size: 0.9rem;
+      svg {
+          margin-left: 5px;
+          font-size: 1rem;
+          color: $secondary-backgroundColor;
+      }
+   }
+   
+  
+   
+   

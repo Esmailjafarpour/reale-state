@@ -1,0 +1,31 @@
+@import "../../app/variables.module.scss";
+.card {
+     box-shadow: $secondary-color-two  0px 4px 15px;
+    //  border: 1px solid $secondary-color;
+     border-radius: 15px;
+     overflow: hidden;
+     padding: 10px;
+     transition: all ease-in 0.1s;
+     margin: 10px 0;
+     background-color: $secondary-backgroundColor-two;
+     transition: all 0.5s;
+   }
+   
+   .card:hover {
+     transform: translateY(-1px);
+     box-shadow: $secondary-color  0px 4px 15px;
+    //  border: 1px solid $primary-color;
+   } 
+   
+   .card img {
+     border-radius: 10px;
+   }
+   
+   .card p {
+     font-size: 1.2rem;
+     font-weight: 400;
+     color:$text-primary-color;
+     text-align: center;
+     margin: 10px 0 5px;
+     color: $text-secondary-color;
+   }

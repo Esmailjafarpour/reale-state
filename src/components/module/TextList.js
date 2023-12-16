@@ -1,6 +1,6 @@
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import { AiOutlineDelete } from "react-icons/ai";
-import styles from "@/module/TextList.module.css";
+import styles from "@/module/TextList.module.scss";
 
 const TextList = ({ title, profileData, setProfileData, type }) => {
 

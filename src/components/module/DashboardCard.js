@@ -6,7 +6,7 @@ import { FiEdit } from "react-icons/fi";
 import { toast, Toaster } from "react-hot-toast";
 import Loader from "@/module/Loader";
 import Card from "@/module/Card";
-import styles from "@/module/DashboardCard.module.css";
+import styles from "@/module/DashboardCard.module.scss";
 
 const DashboardCard = ({ data }) => {
   const [loading, setLoading] = useState(false);

@@ -1,5 +1,5 @@
 import AdminCard from "@/module/AdminCard";
-import styles from "@/template/AdminPage.module.css";
+import styles from "@/template/AdminPage.module.scss";
 
 const AdminPage = ({profiles}) => {
      return (

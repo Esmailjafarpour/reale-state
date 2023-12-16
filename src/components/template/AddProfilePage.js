@@ -7,7 +7,7 @@ import RadioList from "@/module/RadioList";
 import TextList from "@/module/TextList";
 import CustomDatePicker from "@/module/CustomDatePicker";
 import Loader from "@/module/Loader";
-import styles from "@/template/AddProfilePage.module.css";
+import styles from "@/template/AddProfilePage.module.scss";
 
 const AddProfilePage = ({ data }) => {
   const [profileData, setProfileData] = useState({

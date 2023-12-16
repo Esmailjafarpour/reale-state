@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CgProfile } from "react-icons/cg";
 import LogoutButton from "@/module/LogoutButton";
-import styles from "@/layout/DashboardSidebar.module.css";
+import styles from "@/layout/DashboardSidebar.module.scss";
 
 
 const DashboardSidebar = async ({children , role , email}) => {

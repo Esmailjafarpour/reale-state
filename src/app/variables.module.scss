@@ -1,0 +1,22 @@
+$primary-color: rgb(255, 255, 255);
+$secondary-color: rgb(115, 60, 255);
+$secondary-color-two: rgb(176, 145, 255);
+$gray-color : rgb(120 120 120);
+
+$primary-backgroundColor:rgb(239, 239, 239);
+$secondary-backgroundColor:rgb(106 45 236 / 83%);
+$secondary-backgroundColor-two:rgba(255, 255, 255, 0.83);
+
+$btn-primary-color: rgb(255, 255, 255);
+$btn-secondary-color: rgb(108, 34, 235);
+
+$text-primary-color : rgb(255, 255, 255);
+$text-secondary-color : rgb(126, 63, 235);
+$text-hover-color : rgb(253 215 251);
+
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  textColor: $text-primary-color;
+}

@@ -6,7 +6,7 @@ import { Toaster , toast } from "react-hot-toast";
 import Loader from "@/module/Loader";
 import FormInput from "@/module/FormInput";
 import Link from "next/link";
-import styles from "@/template/SignupPage.module.css";
+import styles from "@/template/SignupPage.module.scss";
 
 
 const SigninPage = () => {

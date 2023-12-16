@@ -12,10 +12,12 @@
      color: #f7d22e;
      cursor: pointer;
      padding: 4px 8px;
+
+    svg {
+      font-size: 1.2rem !important;
+      margin: 5px ;
+      color: #f7d22e !important;
+    }
+
    }
    
-   .button svg {
-     font-size: 1.2rem !important;
-     margin: 5px ;
-     color: #f7d22e !important;
-   }

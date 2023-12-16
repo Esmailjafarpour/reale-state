@@ -8,7 +8,7 @@ import Title from "@/module/Title";
 import ItemList from "@/module/ItemList";
 import ShareButton from "@/module/ShareButton";
 import { e2p, sp } from "@/utils/replaceNumber";
-import styles from "@/template/DetailsPage.module.css";
+import styles from "@/template/DetailsPage.module.scss";
 
 const DetailsPage = ({
   data: {

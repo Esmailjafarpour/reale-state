@@ -5,7 +5,7 @@ import { Toaster , toast } from "react-hot-toast";
 import Link from "next/link";
 import Loader from "@/module/Loader";
 import FormInput from "@/module/FormInput";
-import styles from "@/template/SignupPage.module.css";
+import styles from "@/template/SignupPage.module.scss";
 
 const SignupPage = () => {
 

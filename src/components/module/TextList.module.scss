@@ -1,0 +1,59 @@
+.container {
+     margin-bottom: 40px;
+     p {
+     font-size: 1.1rem;
+     margin-bottom: 5px;
+    }
+
+    button {
+    border: none;
+    background-color: #f7d22f;
+    color: #080808;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all ease-in 0.1s;
+    cursor: pointer;
+    padding: 4px 8px;
+    display: flex;
+    margin-top: 20px;
+    &:hover {
+      transform: scale(1.05);
+    }
+    svg {
+      margin-right: 5px;
+      font-size: 1.2rem;
+    }
+    }
+  }
+   
+  .card {
+    display: flex;
+    margin: 10px 0;
+    input {
+    width: 300px;
+    border: 1px #304ffe dashed;
+    color: grey;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    height: 30px;
+    margin-left: 10px;
+    &:focus {
+      border: 1px #304ffe solid;
+      outline: none;
+    }
+
+    button {
+      margin: 0;
+      color: #db0505;
+      background-color: #fff;
+      border: 1px #db0505 solid;
+      display: flex;
+      align-items: center;
+      line-height: 10px;
+    }
+  }
+  }
+   
+   

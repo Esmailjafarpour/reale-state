@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/module/RadioList.module.css";
+import styles from "@/module/RadioList.module.scss";
 
 const RadioList = ({ profileData, setProfileData }) => {
   const { category } = profileData;

@@ -1,0 +1,44 @@
+@import "../../app/variables.module.scss"; 
+
+.footer {
+     display: flex;
+     justify-content: space-between;
+     padding: 20px;
+     margin: 80px 0 20px;
+     border-radius: 10px;
+     background-color: $secondary-backgroundColor;
+     color: $text-secondary-color;
+
+     div:first-child{
+      width: 70%;
+     }
+     div:last-child{
+      width: 30%;
+      display: flex;
+      justify-content: end;
+     }
+
+     h3 {
+     font-weight: 600;
+     font-size: 1.4rem;
+     margin-bottom: 10px;
+     color: $text-primary-color;
+    }
+
+    p{
+      color: $text-primary-color;
+    }
+
+    li{
+      color: $text-primary-color;
+    }
+
+   }
+   
+   .desc {
+     width: 70%;
+     text-align: justify;
+     margin-left: 30px;
+   }
+   
+  

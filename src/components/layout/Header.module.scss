@@ -1,0 +1,78 @@
+@import "../../app/variables.module.scss"; 
+.header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px;
+     margin: 20px 0;
+     border-radius: 10px;
+     background-color: $secondary-backgroundColor;
+    //  color: $text-secondary-color;
+
+    .first{
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+       .logo {
+          color: $primary-color;
+          font-size: 45px;
+          height: 46px;
+          cursor: pointer;
+        }
+
+        .Meno{
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            ul {
+            list-style: none;
+            display: flex;
+            li {
+              margin-left: 30px;
+              a{
+                color: $text-primary-color;
+                font-weight: 700;
+                &:hover{
+                  color: $text-hover-color;
+                }
+              }
+            }
+          }
+        }
+    }
+ 
+   }
+   
+   .login{
+      a {
+      display: flex;
+      align-items: center;
+      background-color: $primary-backgroundColor;
+      color: $secondary-backgroundColor;
+      padding: 8px 8px;
+      border-radius: 7px;
+      border: 2px solid $primary-backgroundColor;
+      transition: all ease-in 0.3s;
+      &:hover {
+        background-color: $secondary-color;
+        color: $primary-backgroundColor;
+        border: 2px solid $primary-backgroundColor;
+      }
+    }
+
+    svg {
+      font-size: 25px;
+    }
+
+    span {
+      margin-right: 5px;
+    }
+
+  } 
+   
+   
+   @media (max-width: 600px) {
+     .header ul li {
+       margin-left: 10px;
+     }
+   }

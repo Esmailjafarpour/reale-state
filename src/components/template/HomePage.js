@@ -2,7 +2,9 @@ import { FiCircle } from "react-icons/fi";
 import { FaCity } from "react-icons/fa";
 import CategoryCard from "@/module/CategoryCard";
 import { cities, services, categories } from "@/constants/strings";
-import styles from "@/template/HomePage.module.css";
+import { icons } from "@/constants/icons";
+import styles from "@/template/HomePage.module.scss";
+import variables  from "@/app/variables.module.scss";
 
 const HomePage = () => {
   return (
@@ -11,11 +13,11 @@ const HomePage = () => {
         <div className={styles.desc}>
           <h1>سامانه خرید و اجاره ی ملک</h1>
           <ul>
-            {services.map((i) => (
+            {Object.keys(services).map((i) => (
               <li key={i}>
-                {i}
+                {services[i]}
                 <span>
-                  <FiCircle />
+                  {icons[i]}
                 </span>
               </li>
             ))}
@@ -24,7 +26,7 @@ const HomePage = () => {
       </div>
       <div className={styles.categories}>
         {Object.keys(categories).map((i) => (
-          <CategoryCard title={categories[i]} name={i} />
+          <CategoryCard key={i} title={categories[i]} name={i} />
         ))}
       </div>
       <div className={styles.city}>

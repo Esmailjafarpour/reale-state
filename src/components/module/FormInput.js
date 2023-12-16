@@ -1,5 +1,5 @@
 
-import styles from "@/module/FormInput.module.css";
+import styles from "@/module/FormInput.module.scss";
 const FormInput = ({label , name , type , value , onChange , placeholder}) => {
      return (
           <div className={styles.formInput}>

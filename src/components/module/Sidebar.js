@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { HiFilter } from "react-icons/hi";
+import { BiSolidCategoryAlt } from "react-icons/bi";
 import {categories} from "@/constants/strings";
-import styles from "@/module/Sidebar.module.css";
+import styles from "@/module/Sidebar.module.scss";
 
 const Sidebar = () => {
  
   return (
     <div className={styles.container}>
       <p>
-        <HiFilter />
+        <BiSolidCategoryAlt />
         دسته بندی
       </p>
       <Link href="/buy-residential">همه</Link>

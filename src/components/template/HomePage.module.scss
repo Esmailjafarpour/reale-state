@@ -1,0 +1,112 @@
+@import "../../app/variables.module.scss";
+
+.banner {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 10px;
+     padding: 20px;
+     margin: 100px 0;
+   }
+   
+   .desc {
+     width: 100%;
+     text-align: center;
+     color: $text-primary-color;
+     h1{
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: $text-secondary-color;
+     }
+     ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      width: 80px;
+      margin: 10px;
+      background-color: rgb(108, 34, 235);
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      font-weight: 600;
+      justify-content: space-around;
+     }
+
+     span {
+      font-weight: 400;
+      margin-right: 5px;
+      height: 20px;
+    }
+   }
+    
+  
+   .categories {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     margin: 50px 0;
+   }
+   
+   .city {
+     margin: 100px 0;
+     h3 {
+      font-weight: 600;
+      font-size: 2rem;
+      text-align: center;
+      color: $text-primary-color;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      list-style: none;
+    }
+
+    li {
+      background-color: $secondary-backgroundColor;
+      color: $text-primary-color;
+      font-size: 1.2rem;
+      width: 250px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+     }
+
+     span {
+      height: 30px;
+      margin-right: 15px;
+      font-weight: 400;
+    }
+
+   }
+   
+   @media (max-width: 1000px) {
+     .banner {
+       flex-direction: column-reverse;
+     }
+   }
+   
+   @media (max-width: 600px) {
+     .desc h1 {
+       font-size: 2.5rem;
+     }
+   
+     .categories {
+       justify-content: center;
+     }
+   
+     .city ul {
+       justify-content: center;
+     }
+   }

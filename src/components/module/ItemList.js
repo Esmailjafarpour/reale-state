@@ -1,4 +1,4 @@
-import styles from "@/module/ItemList.module.css";
+import styles from "@/module/ItemList.module.scss";
 
 const ItemList = ({data}) => {
   return (

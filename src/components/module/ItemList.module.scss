@@ -1,8 +1,13 @@
-.container ul {
+.container {
+
+  ul {
      padding-right: 20px;
      margin-bottom: 50px;
    }
-   
-   .container li::marker {
+
+   li::marker {
      color: #304ffe;
    }
+   
+}
+   

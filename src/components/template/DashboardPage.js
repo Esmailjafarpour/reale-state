@@ -1,4 +1,4 @@
-import styles from "@/template/DashboardPage.module.css";
+import styles from "@/template/DashboardPage.module.scss";
 
 const DashboardPage = async ({createdAt}) => {
   

@@ -1,5 +1,5 @@
 import DashboardCard from "@/module/DashboardCard";
-import styles from "@/template/MyProfilePage.module.css";
+import styles from "@/template/MyProfilePage.module.scss";
 
 const MyProfilePage = ({profiles}) => {
      return (
