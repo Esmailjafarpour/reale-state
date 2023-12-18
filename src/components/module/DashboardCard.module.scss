@@ -1,8 +1,11 @@
+@import "../../app//variables.module.scss";
 .container {
     display: flex;
-    border: 2px solid #ffffff58;
+    border: 2px solid $primary-color;
     border-radius: 15px;
     margin-bottom: 20px;
+    background-color: $bg-secondary-two;
+    padding: 10px;
   }
    
    .main {
@@ -16,13 +19,14 @@
         justify-content: center;
         align-items: center;
         width: 48%;
-        background-color: rgb(232 243 229 / 93%);
+        background-color: $bg-secondary;
         cursor: pointer;
         height: 40px;
         border-radius: 8px;
         font-size: 1rem;
-        border: 1px solid rgb(0, 168, 0);
-        color: rgb(0, 168, 0);
+        border: 1px solid $secondary-color;
+        color: $primary-color;
+        
         div{
           margin: 0 !important;
         }
