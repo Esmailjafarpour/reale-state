@@ -7,7 +7,7 @@
      padding: 10px;
      transition: all ease-in 0.1s;
      margin: 10px 0;
-     background-color: $secondary-backgroundColor-two;
+     background-color: $bg-secondary-two;
      transition: all 0.5s;
    }
    
@@ -28,4 +28,9 @@
      text-align: center;
      margin: 10px 0 5px;
      color: $text-secondary-color;
+   }
+
+
+   @media (max-width : 600px) {
+    
    }

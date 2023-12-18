@@ -1,13 +1,13 @@
 "use client";
 
 import { signOut } from "next-auth/react";
-import { FiLogOut } from "react-icons/fi";
+import { GiExitDoor } from "react-icons/gi";
 import styles from "@/module/LogoutButton.module.scss";
 
 const LogoutButton = () => {
      return (
           <button className={styles.button} onClick={signOut}>
-               <FiLogOut/>
+               <GiExitDoor/>
                خروج
           </button>
      );

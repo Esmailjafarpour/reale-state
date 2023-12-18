@@ -1,4 +1,5 @@
-    .cotainer{
+    @import "../../app/variables.module.scss";
+    .container{
       h3 {
         color: #304ffe;
         font-weight: 400;
@@ -6,26 +7,26 @@
         margin-bottom: 20px;
       }
       p {
-        color: grey;
+        color: $secondary-color;
       }
     }
 
    .createdAt {
      margin-top: 100px;
      display: flex;
-     background-color: #304ffe18;
      width: fit-content;
      padding: 5px 10px;
+     border: 2px solid $secondary-color;
      border-radius: 5px;
-     background: #787878;
-     color: #ebcc2e;
+     background-color:$bg-secondary-two ;
+     color: $secondary-color;
     p {
       margin: 0;
       font-weight: 400;
       margin-left: 10px;
     }
     span {
-      color: #fbfbfb;
+      color: $secondary-color;
     }
    }
    

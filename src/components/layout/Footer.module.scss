@@ -6,7 +6,7 @@
      padding: 20px;
      margin: 80px 0 20px;
      border-radius: 10px;
-     background-color: $secondary-backgroundColor;
+     background-color: $bg-secondary;
      color: $text-secondary-color;
 
      div:first-child{
@@ -39,6 +39,36 @@
      width: 70%;
      text-align: justify;
      margin-left: 30px;
+   }
+
+   @media (max-width : 600px) {
+ 
+      .footer{
+        display: flex;
+        flex-direction: column;
+        div:first-child{
+          width: 100%;
+          h3{
+            text-align: center;
+          }
+
+          p{
+            text-align: center;
+          }
+         }
+
+         div:last-child{
+           margin: 20px 0;
+           width: 100%;
+           ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+           }
+         }
+      }
+
+    
    }
    
   

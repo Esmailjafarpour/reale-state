@@ -15,7 +15,7 @@
      box-shadow: #ffffff 0px 2px 10px;
      margin-left: 40px;
      width: 220px;
-     background-color: $secondary-backgroundColor;
+     background-color: $bg-secondary;
    }
    
    .main {
@@ -24,7 +24,7 @@
      flex-wrap: wrap;
      justify-content: start;
      gap: 1%;
-     background-color: $secondary-backgroundColor-two;
+     background-color: $bg-secondary-two;
      padding: 20px;
      border-radius: 8px;
    }

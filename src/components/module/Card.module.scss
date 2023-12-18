@@ -6,7 +6,7 @@
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
-    background-color: $secondary-backgroundColor-two;
+    background-color: $bg-secondary-two;
 
     span {
       color: $gray-color;
@@ -34,7 +34,7 @@
    
    .icon svg {
      font-size: 1.8rem;
-     background-color: $secondary-backgroundColor;
+     background-color: $bg-secondary;
      color: $primary-color;
      padding: 3px;
      border-radius: 5px;
@@ -53,7 +53,7 @@
       svg {
           margin-left: 5px;
           font-size: 1rem;
-          color: $secondary-backgroundColor;
+          color: $bg-secondary;
       }
    }
    

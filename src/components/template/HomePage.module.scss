@@ -6,7 +6,7 @@
      align-items: center;
      border-radius: 10px;
      padding: 20px;
-     margin: 100px 0;
+     margin: 60px 0;
    }
    
    .desc {
@@ -37,6 +37,7 @@
       font-size: 1rem;
       font-weight: 600;
       justify-content: space-around;
+      cursor: pointer;
      }
 
      span {
@@ -71,7 +72,7 @@
     }
 
     li {
-      background-color: $secondary-backgroundColor;
+      background-color: $bg-secondary;
       color: $text-primary-color;
       font-size: 1.2rem;
       width: 250px;
@@ -104,9 +105,13 @@
    
      .categories {
        justify-content: center;
+       gap: 10px;
      }
    
-     .city ul {
-       justify-content: center;
-     }
+     .city{
+        ul {
+        justify-content: center;
+        gap: 10px;
+      }
+     } 
    }
