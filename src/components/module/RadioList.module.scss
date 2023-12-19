@@ -1,9 +1,10 @@
+@import "../../app/variables.module.scss";
 .container {
      margin-bottom: 40px;
      p {
       font-size: 1.1rem;
       margin-bottom: 5px;
-      color: rgb(255, 255, 255);
+      color: $secondary-color;
     }
    }
    
@@ -14,14 +15,13 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      background-color: #304ffe18;
-      color: #020202;
+      color: $primary-color;
       margin-left: 30px;
       width: 75px;
       padding: 3px 5px;
       border-radius: 5px;
       cursor: pointer;
-      background-color: #f7d22f;
+      background-color: $bg-secondary;
       font-weight: 800;
       font-size: 1.1rem;
      }

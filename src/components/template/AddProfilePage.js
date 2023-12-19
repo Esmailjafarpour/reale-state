@@ -1,5 +1,5 @@
 "use client";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Toaster, toast } from "react-hot-toast";
 import TextInput from "@/module/TextInput";
@@ -24,13 +24,13 @@ const AddProfilePage = ({ data }) => {
   });
 
   useEffect(() => {
-   if (data) {
-     setProfileData(data)
-   }
+    if (data) {
+      setProfileData(data);
+    }
   }, []);
 
   const [loading, setLoading] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
 
   const submitHandler = async () => {
     setLoading(true);
@@ -52,63 +52,76 @@ const AddProfilePage = ({ data }) => {
   };
 
   const editHandler = async () => {
-      setLoading(true)
-      const res = await fetch("/api/profile",{
-        method : "PATCH",
-        body : JSON.stringify(profileData),
-        headers : {"Content-Type" : "application/json"}
-      })
-      const data = await res.json();
-      setLoading(false)
-      if (data.error) {
-        toast.error(data.error)
-      } else {
-        toast.success(data.message);
-        router.refresh();
-        // router.replace("/dashboard/my-profiles");
-      }
-  }
-   
+    setLoading(true);
+    const res = await fetch("/api/profile", {
+      method: "PATCH",
+      body: JSON.stringify(profileData),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await res.json();
+    setLoading(false);
+    if (data.error) {
+      toast.error(data.error);
+    } else {
+      toast.success(data.message);
+      router.refresh();
+      // router.replace("/dashboard/my-profiles");
+    }
+  };
+
   return (
     <div className={styles.container}>
       <h3>{data ? "ویرایش آگهی" : "ثبت آگهی"}</h3>
-      <TextInput
-        title="عنوان آگهی"
-        name="title"
-        profileData={profileData}
-        setProfileData={setProfileData}
-      />
-      <TextInput
-        title="توضیحات"
-        name="description"
-        profileData={profileData}
-        setProfileData={setProfileData}
-        textarea="true"
-      />
-      <TextInput
-        title="آدرس"
-        name="location"
-        profileData={profileData}
-        setProfileData={setProfileData}
-      />
-      <TextInput
-        title="شماره تماس"
-        name="phone"
-        profileData={profileData}
-        setProfileData={setProfileData}
-      />
-      <TextInput
-        title="قیمت (تومان)"
-        name="price"
-        profileData={profileData}
-        setProfileData={setProfileData}
-      />
-      <TextInput
-        title="بنگاه"
-        name="realState"
-        profileData={profileData}
-        setProfileData={setProfileData}
-      />
+      <div>
+        <div>
+          <TextInput
+            title="عنوان آگهی"
+            name="title"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+          <TextInput
+            title="شماره تماس"
+            name="phone"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+        </div>
+
+        <div>
+          <TextInput
+            title="آدرس"
+            name="location"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+
+          <TextInput
+            title="قیمت (تومان)"
+            name="price"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+        </div>
+
+        <div>
+          <TextInput
+            title="توضیحات"
+            name="description"
+            profileData={profileData}
+            setProfileData={setProfileData}
+            textarea="true"
+          />
+
+          <TextInput
+            title="بنگاه"
+            name="realState"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+        </div>
+      </div>
+
       <RadioList profileData={profileData} setProfileData={setProfileData} />
       <TextList
         title="امکانات رفاهی"
@@ -128,10 +141,10 @@ const AddProfilePage = ({ data }) => {
       />
       <Toaster />
       {loading ? (
-        <Loader loading={loading} color="#304ffe"/>
+        <Loader loading={loading} color="#304ffe" />
       ) : data ? (
         <button className={styles.submit} onClick={editHandler}>
-           ویرایش آگهی
+          ویرایش آگهی
         </button>
       ) : (
         <button className={styles.submit} onClick={submitHandler}>

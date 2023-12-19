@@ -1,3 +1,5 @@
+@import "../../app/variables.module.scss";
+
 .container {
      margin-bottom: 40px;
      p {
@@ -7,8 +9,8 @@
 
     button {
     border: none;
-    background-color: #f7d22f;
-    color: #080808;
+    background-color: $btn-secondary-color-one;
+    color: $primary-color;
     font-size: 1.1rem;
     font-weight: 500;
     border-radius: 5px;
@@ -20,10 +22,12 @@
     &:hover {
       transform: scale(1.05);
     }
+
     svg {
       margin-right: 5px;
       font-size: 1.2rem;
     }
+
     }
   }
    
@@ -32,28 +36,29 @@
     margin: 10px 0;
     input {
     width: 300px;
-    border: 1px #304ffe dashed;
-    color: grey;
+    border: 1px $secondary-color dashed;
+    color: $secondary-color;
     border-radius: 5px;
     padding: 10px;
     font-size: 1rem;
     height: 30px;
     margin-left: 10px;
     &:focus {
-      border: 1px #304ffe solid;
+      border: 1px $secondary-color solid;
       outline: none;
     }
-
-    button {
-      margin: 0;
-      color: #db0505;
-      background-color: #fff;
-      border: 1px #db0505 solid;
-      display: flex;
-      align-items: center;
-      line-height: 10px;
-    }
   }
+
+  button {
+    margin: 0;
+    color: #db0505;
+    background-color: $bg-secondary-four;
+    border: 1px #db0505 solid;
+    display: flex;
+    align-items: center;
+    line-height: 10px;
+  }
+
   }
    
    

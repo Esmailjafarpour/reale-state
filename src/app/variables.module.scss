@@ -4,11 +4,14 @@ $secondary-color-two: rgb(176, 145, 255);
 $gray-color : rgb(222, 222, 222);
 
 $bg-primary:rgb(239, 239, 239);
-$bg-secondary:rgb(106 45 236 / 83%);
+$bg-secondary:#6a2decd4;
 $bg-secondary-two:rgba(255, 255, 255, 0.83);
+$bg-secondary-three:rgba(180, 138, 244, 0.83);
+$bg-secondary-four:rgb(255, 255, 255);
 
 $btn-primary-color: rgb(255, 255, 255);
-$btn-secondary-color: rgb(108, 34, 235);
+$btn-secondary-color-one: rgb(108, 34, 235);
+$btn-secondary-color-one-two: rgba(122, 53, 242, 0.8);
 
 $text-primary-color : rgb(255, 255, 255);
 $text-secondary-color : rgb(126, 63, 235);
@@ -18,5 +21,6 @@ $text-hover-color : rgb(253 215 251);
 :export {
   primaryColor: $primary-color;
   secondaryColor: $secondary-color;
+  secondaryColorTwo: $secondary-color-two;
   textColor: $text-primary-color;
 }

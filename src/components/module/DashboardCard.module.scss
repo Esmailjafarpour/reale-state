@@ -1,11 +1,13 @@
 @import "../../app//variables.module.scss";
 .container {
     display: flex;
+    flex-direction: column;
     border: 2px solid $primary-color;
     border-radius: 15px;
     margin-bottom: 20px;
     background-color: $bg-secondary-two;
     padding: 10px;
+    width: 30%;
   }
    
    .main {
@@ -13,12 +15,11 @@
      align-items: flex-end;
      justify-content: space-between;
      padding: 10px;
-     width: 100%;
       button {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 48%;
+        width: 45%;
         background-color: $bg-secondary;
         cursor: pointer;
         height: 40px;
@@ -33,7 +34,7 @@
         &:last-child {
           border: 1px solid #db0505;
           color: #db0505;
-          background-color: #cfaaaa;
+          background-color: $bg-secondary-four;
         }
       }
 

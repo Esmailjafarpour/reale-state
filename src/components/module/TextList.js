@@ -1,5 +1,5 @@
 import { MdOutlineLibraryAdd } from "react-icons/md";
-import { AiOutlineDelete } from "react-icons/ai";
+import { RiDeleteBinFill } from "react-icons/ri";
 import styles from "@/module/TextList.module.scss";
 
 const TextList = ({ title, profileData, setProfileData, type }) => {
@@ -31,7 +31,7 @@ const TextList = ({ title, profileData, setProfileData, type }) => {
           <input type="text" value={item} onChange={(e) => changeHandler(e , index)}/>
           <button onClick={() => deleteHandler(index)}>
                حذف
-               <AiOutlineDelete/>
+               <RiDeleteBinFill/>
           </button>
         </div>
       ))}

@@ -1,12 +1,14 @@
+@import "../../app//variables.module.scss";
 .container {
-     border-bottom: 2px solid #304ffe;
-     padding-bottom: 10px;
-     margin-bottom: 80px;
+     border: 2px solid $bg-secondary;
+     padding: 20px;
+     margin-bottom: 40px;
+     border-radius: 8px;
 
      h3 {
       font-size: 1.2rem;
       font-weight: 400;
-      color: #304ffe;
+      color: $secondary-color;
       margin-bottom: 20px;
     }
 
@@ -15,32 +17,54 @@
       margin-bottom: 20px;
     }
 
-    button {
-      background-color: #00a800;
-      border: none;
-      padding: 5px 15px;
-      font-size: 1rem;
-      font-weight: 400;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: all ease-in 0.1s;
-      &:hover {
-        color: #000;
-      }
+    .properties {
+      display: flex;
+      margin-bottom: 20px;
+      span {
+       background-color: $bg-secondary-three;
+       color: $primary-color;
+       padding: 5px 10px;
+       margin-left: 15px;
+       border-radius: 5px;
+     }
     }
+
+    .buttons {
+      display: flex;
+        button{
+          background-color: $btn-secondary-color-one-two;
+          border: none;
+          padding: 5px 15px;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $primary-color;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+          transition: all ease-in 0.2s;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            color: $text-hover-color;
+          }
+          &:last-child{
+            background-color: $bg-primary !important;
+            color: #cc1b1b;
+            border: 2px solid $gray-color;
+            margin-right: 10px;
+          }
+
+          svg{
+            margin-right: 10px;
+            font-size: 25px;
+          }
+      }
+      
+    }
+
+
    }
   
-   .properties {
-     display: flex;
-     margin-bottom: 20px;
-     span {
-      background-color: #304ffe58;
-      color: #304ffe;
-      padding: 5px 10px;
-      margin-left: 15px;
-      border-radius: 5px;
-    }
-   }
+  
   

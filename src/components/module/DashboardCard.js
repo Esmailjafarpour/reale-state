@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { AiOutlineDelete } from "react-icons/ai";
+import { RiDeleteBinFill } from "react-icons/ri";
+
 import { FiEdit } from "react-icons/fi";
 import { toast, Toaster } from "react-hot-toast";
 import Loader from "@/module/Loader";
@@ -46,7 +47,7 @@ const DashboardCard = ({ data }) => {
          : 
           <button onClick={deleteHandler}>
             حذف آگهی
-            <AiOutlineDelete />
+            <RiDeleteBinFill />
           </button>
         }
       </div>
