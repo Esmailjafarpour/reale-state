@@ -23,8 +23,13 @@
 
   p {
     font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: $secondary-color;
+    background: $bg-secondary;
+    color: $primary-color;
+    width: 110px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
   }
 
 } 

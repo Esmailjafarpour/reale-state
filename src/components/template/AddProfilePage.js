@@ -7,6 +7,7 @@ import RadioList from "@/module/RadioList";
 import TextList from "@/module/TextList";
 import CustomDatePicker from "@/module/CustomDatePicker";
 import Loader from "@/module/Loader";
+import { secondaryColorTwo } from "@/app/variables.module.scss";
 import styles from "@/template/AddProfilePage.module.scss";
 
 const AddProfilePage = ({ data }) => {
@@ -74,14 +75,14 @@ const AddProfilePage = ({ data }) => {
       <h3>{data ? "ویرایش آگهی" : "ثبت آگهی"}</h3>
 
       <div className={styles.main}>
-        <div className={styles.moduleOne}>
+        <div className={styles.sessionOne}>
           <RadioList
             profileData={profileData}
             setProfileData={setProfileData}
           />
         </div>
 
-        <div className={styles.moduleTwo}>
+        <div className={styles.sessionTwo}>
           <TextInput
             title="عنوان آگهی"
             name="title"
@@ -96,7 +97,7 @@ const AddProfilePage = ({ data }) => {
           />
         </div>
 
-        <div className={styles.moduleThree}>
+        <div className={styles.sessionThree}>
           <TextInput
             title="آدرس"
             name="location"
@@ -111,7 +112,7 @@ const AddProfilePage = ({ data }) => {
           />
         </div>
 
-        <div className={styles.moduleFour}>
+        <div className={styles.sessionFour}>
           <CustomDatePicker
             profileData={profileData}
             setProfileData={setProfileData}
@@ -124,22 +125,7 @@ const AddProfilePage = ({ data }) => {
           />
         </div>
 
-        <div className={styles.moduleFive}>
-          <TextList
-            title="امکانات رفاهی"
-            profileData={profileData}
-            setProfileData={setProfileData}
-            type="rules"
-          />
-          <TextList
-            title="قوانین"
-            profileData={profileData}
-            setProfileData={setProfileData}
-            type="amenities"
-          />
-        </div>
-
-        <div className={styles.moduleSix}>
+        <div className={styles.sessionFive}>
           <TextInput
             title="توضیحات"
             name="description"
@@ -149,9 +135,29 @@ const AddProfilePage = ({ data }) => {
           />
         </div>
 
+        <div className={styles.sessionSix}>
+          <TextList
+            title="امکانات رفاهی"
+            profileData={profileData}
+            setProfileData={setProfileData}
+            type="rules"
+          />
+        </div>
+
+        <div className={styles.sessionSeven}>
+          <TextList
+            title="قوانین"
+            profileData={profileData}
+            setProfileData={setProfileData}
+            type="amenities"
+          />
+        </div>
+
+       
+
         <Toaster />
         {loading ? (
-          <Loader loading={loading} color="#304ffe" />
+          <Loader loading={loading} color={secondaryColorTwo} />
         ) : data ? (
           <button className={styles.submit} onClick={editHandler}>
             ویرایش آگهی

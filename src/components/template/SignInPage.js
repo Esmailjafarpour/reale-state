@@ -6,6 +6,7 @@ import { Toaster , toast } from "react-hot-toast";
 import Loader from "@/module/Loader";
 import FormInput from "@/module/FormInput";
 import Link from "next/link";
+import { secondaryColorTwo } from "@/app/variables.module.scss";
 import styles from "@/template/SignupPage.module.scss";
 
 
@@ -65,7 +66,7 @@ const SigninPage = () => {
                     })}  
                />
                {state.loading?
-                    <Loader loading={state.loading} color="#fed830"/>
+                    <Loader loading={state.loading} color={secondaryColorTwo}/>
                     :<button type="submit"  onClick={signinHandler}>ورود</button>}
              </form>  
              <p>

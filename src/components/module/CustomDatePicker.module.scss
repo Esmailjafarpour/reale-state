@@ -2,8 +2,14 @@
 .container {
      margin-bottom: 60px;
      p {
-      margin-bottom: 5px;
-      color: $secondary-color;
+   
+      background: $bg-secondary;
+      color: $primary-color;
+      width: 110px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      text-align: center;
     }
     input {
       width: 110px;

@@ -2,17 +2,18 @@
 
 .container {
      margin-bottom: 40px;
-     width: 45%;
+     width: 100%;
      p {
      font-size: 1.1rem;
      margin-bottom: 5px;
+     
     }
 
     button {
     border: none;
     background-color: $btn-secondary-color-one;
     color: $primary-color;
-    font-size: 1.1rem;
+    font-size: .8rem;
     font-weight: 500;
     border-radius: 5px;
     transition: all ease-in 0.1s;
