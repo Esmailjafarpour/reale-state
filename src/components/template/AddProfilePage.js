@@ -72,8 +72,16 @@ const AddProfilePage = ({ data }) => {
   return (
     <div className={styles.container}>
       <h3>{data ? "ویرایش آگهی" : "ثبت آگهی"}</h3>
-      <div>
-        <div>
+
+      <div className={styles.main}>
+        <div className={styles.moduleOne}>
+          <RadioList
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+        </div>
+
+        <div className={styles.moduleTwo}>
           <TextInput
             title="عنوان آگهی"
             name="title"
@@ -88,14 +96,13 @@ const AddProfilePage = ({ data }) => {
           />
         </div>
 
-        <div>
+        <div className={styles.moduleThree}>
           <TextInput
             title="آدرس"
             name="location"
             profileData={profileData}
             setProfileData={setProfileData}
           />
-
           <TextInput
             title="قیمت (تومان)"
             name="price"
@@ -104,15 +111,11 @@ const AddProfilePage = ({ data }) => {
           />
         </div>
 
-        <div>
-          <TextInput
-            title="توضیحات"
-            name="description"
+        <div className={styles.moduleFour}>
+          <CustomDatePicker
             profileData={profileData}
             setProfileData={setProfileData}
-            textarea="true"
           />
-
           <TextInput
             title="بنگاه"
             name="realState"
@@ -120,37 +123,45 @@ const AddProfilePage = ({ data }) => {
             setProfileData={setProfileData}
           />
         </div>
-      </div>
 
-      <RadioList profileData={profileData} setProfileData={setProfileData} />
-      <TextList
-        title="امکانات رفاهی"
-        profileData={profileData}
-        setProfileData={setProfileData}
-        type="rules"
-      />
-      <TextList
-        title="قوانین"
-        profileData={profileData}
-        setProfileData={setProfileData}
-        type="amenities"
-      />
-      <CustomDatePicker
-        profileData={profileData}
-        setProfileData={setProfileData}
-      />
-      <Toaster />
-      {loading ? (
-        <Loader loading={loading} color="#304ffe" />
-      ) : data ? (
-        <button className={styles.submit} onClick={editHandler}>
-          ویرایش آگهی
-        </button>
-      ) : (
-        <button className={styles.submit} onClick={submitHandler}>
-          ثبت آگهی
-        </button>
-      )}
+        <div className={styles.moduleFive}>
+          <TextList
+            title="امکانات رفاهی"
+            profileData={profileData}
+            setProfileData={setProfileData}
+            type="rules"
+          />
+          <TextList
+            title="قوانین"
+            profileData={profileData}
+            setProfileData={setProfileData}
+            type="amenities"
+          />
+        </div>
+
+        <div className={styles.moduleSix}>
+          <TextInput
+            title="توضیحات"
+            name="description"
+            profileData={profileData}
+            setProfileData={setProfileData}
+            textarea="true"
+          />
+        </div>
+
+        <Toaster />
+        {loading ? (
+          <Loader loading={loading} color="#304ffe" />
+        ) : data ? (
+          <button className={styles.submit} onClick={editHandler}>
+            ویرایش آگهی
+          </button>
+        ) : (
+          <button className={styles.submit} onClick={submitHandler}>
+            ثبت آگهی
+          </button>
+        )}
+      </div>
     </div>
   );
 };
