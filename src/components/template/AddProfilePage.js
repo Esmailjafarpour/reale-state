@@ -7,7 +7,7 @@ import RadioList from "@/module/RadioList";
 import TextList from "@/module/TextList";
 import CustomDatePicker from "@/module/CustomDatePicker";
 import Loader from "@/module/Loader";
-import { secondaryColorTwo } from "@/app/variables.module.scss";
+import { secondaryColorTwo , primaryColor } from "@/app/variables.module.scss";
 import styles from "@/template/AddProfilePage.module.scss";
 
 const AddProfilePage = ({ data }) => {
@@ -140,7 +140,7 @@ const AddProfilePage = ({ data }) => {
             title="امکانات رفاهی"
             profileData={profileData}
             setProfileData={setProfileData}
-            type="rules"
+            type="amenities"
           />
         </div>
 
@@ -149,15 +149,15 @@ const AddProfilePage = ({ data }) => {
             title="قوانین"
             profileData={profileData}
             setProfileData={setProfileData}
-            type="amenities"
+            type="rules"
           />
         </div>
 
-       
-
         <Toaster />
         {loading ? (
-          <Loader loading={loading} color={secondaryColorTwo} />
+          <button className={styles.loader}>
+                  <Loader loading={loading} color={primaryColor} />
+          </button>
         ) : data ? (
           <button className={styles.submit} onClick={editHandler}>
             ویرایش آگهی

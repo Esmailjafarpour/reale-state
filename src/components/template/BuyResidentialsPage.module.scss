@@ -23,10 +23,13 @@
      display: flex;
      flex-wrap: wrap;
      justify-content: start;
-     gap: 1%;
+     gap: 2%;
      background-color: $bg-secondary-two;
      padding: 20px;
      border-radius: 8px;
+     .card{
+      width: 32%;
+     }
    }
    
    .text {

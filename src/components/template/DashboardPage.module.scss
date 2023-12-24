@@ -1,5 +1,7 @@
     @import "../../app/variables.module.scss";
     .container{
+      display: flex;
+      flex-direction: column;
       h3 {
         color: #304ffe;
         font-weight: 400;

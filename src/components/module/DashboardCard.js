@@ -7,6 +7,7 @@ import { FiEdit } from "react-icons/fi";
 import { toast, Toaster } from "react-hot-toast";
 import Loader from "@/module/Loader";
 import Card from "@/module/Card";
+import { secondaryColorTwo } from "@/app/variables.module.scss";
 import styles from "@/module/DashboardCard.module.scss";
 
 const DashboardCard = ({ data }) => {
@@ -42,8 +43,8 @@ const DashboardCard = ({ data }) => {
         </button>
         {loading ? 
           <button>
-            <Loader loading={loading} color="#ec493e"/>
-        </button>
+            <Loader loading={loading} color={secondaryColorTwo}/>
+          </button>
          : 
           <button onClick={deleteHandler}>
             حذف آگهی

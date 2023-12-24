@@ -6,6 +6,7 @@
     margin-bottom: 20px;
     background-color: $bg-secondary-two;
     overflow: hidden;
+    width: 100%;
 
     span {
       color: $secondary-color-two;
@@ -43,12 +44,16 @@
      font-weight: 400;
      margin: 10px 0;
      color: $secondary-color-two;
+     height: 28px;
+     overflow: hidden;
    }
    
    .location {
      display: flex;
      color: $secondary-color-two;
      font-size: 0.9rem;
+     height: 26px;
+     overflow: hidden;
       svg {
           margin-left: 5px;
           font-size: 1rem;

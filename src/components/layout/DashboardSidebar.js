@@ -18,7 +18,10 @@ const DashboardSidebar = async ({children , role , email}) => {
                     {role === "ADMIN" ? <Link href="/admin">در انتظار تایید</Link>: null}
                     <LogoutButton/>
                </div>
-               <div className={styles.main}>{children}</div>
+               <div className={styles.main}>
+                    
+                    {children}
+               </div>
           </div>
      );
 }

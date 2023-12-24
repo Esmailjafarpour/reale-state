@@ -1,0 +1,9 @@
+@import "../../app/variables.module.scss";
+.title {
+     color: $secondary-color;
+     font-size: 1.1rem;
+     font-weight: 400;
+     border-bottom: 2px solid $gray-color-two;
+     margin-bottom: 20px;
+     padding-bottom: 10px;
+   }
