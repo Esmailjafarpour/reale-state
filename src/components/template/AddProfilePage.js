@@ -47,6 +47,18 @@ const AddProfilePage = ({ data }) => {
       toast.error(data.error);
     } else {
       toast.success(data.message);
+      setProfileData({
+        title: "",
+        description: "",
+        location: "",
+        phone: "",
+        price: "",
+        realState: "",
+        constructionDate: new Date(),
+        category: "",
+        rules: [],
+        amenities: [],
+      })
       router.refresh();
       // router.replace("/dashboard/my-profiles");
     }

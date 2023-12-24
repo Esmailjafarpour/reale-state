@@ -19,7 +19,6 @@ const DashboardSidebar = async ({children , role , email}) => {
                     <LogoutButton/>
                </div>
                <div className={styles.main}>
-                    
                     {children}
                </div>
           </div>

@@ -1,7 +1,24 @@
-.text {
-     background-color: rgba(219, 5, 5, 0.159);
-     color: rgb(219, 5, 5);
-     font-size: 1.3rem;
-     padding: 10px 15px;
-     border-radius: 10px;
-   }
+@import "../../app/variables.module.scss";
+.content{
+  height: 100%;
+  width: 100%;
+  .message{
+    margin: auto;
+    .text {
+      display: flex;
+      background-color: $bg-primary;
+      color: $secondary-color;
+      font-size: 1.3rem;
+      padding: 10px 15px;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      align-items: center;
+      border: 1px solid $white-color;
+      box-shadow: 0px 0px 20px $secondary-color;
+    }
+  }
+}
+
+

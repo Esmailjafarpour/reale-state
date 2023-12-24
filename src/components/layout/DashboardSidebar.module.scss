@@ -56,13 +56,14 @@
     padding: 10px;
     border-radius: 15px;
     background-color:$bg-secondary-two;
+    
    }
 
    .main>div{
     width: 100%;
     display: flex;
     gap: 2%;
-    
+    flex-wrap: wrap;
    }
 
    .main > div > h3 {
