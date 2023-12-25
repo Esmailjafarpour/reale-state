@@ -1,5 +1,4 @@
 @import "../../app/variables.module.scss";
-
 .container {
      display: flex;
      margin-top: 60px;
@@ -38,7 +37,7 @@
   width: 250px;
   margin-right: 40px;
   div {
-    box-shadow: $box-shadow-color  0px 4px 15px;
+    box-shadow: $secondary-color-two 0px 4px 15px;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 20px;

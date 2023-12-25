@@ -43,7 +43,7 @@ const DetailsPage = ({
       <div className={styles.sidebar}>
         <div className={styles.realState}>
           <SiHomebridge />
-          <p>املاک{realState}</p>
+          <p> املاک {realState}</p>
           <span>
             <AiOutlinePhone />
             {e2p(phone)}

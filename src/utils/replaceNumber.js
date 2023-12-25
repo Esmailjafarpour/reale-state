@@ -11,4 +11,10 @@ const sp = (number) => {
   return e2p(joinedNumber);
 };
 
-export { e2p, p2e, sp };
+const numberWithCommas = (number) => {
+  var parts = number.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
+}
+
+export { e2p, p2e, sp ,numberWithCommas };
