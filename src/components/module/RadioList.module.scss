@@ -1,7 +1,9 @@
 @import "../../app/variables.module.scss";
 .container {
+
      margin-bottom: 40px;
-     p {
+
+    p {
       font-size: 1.1rem;
       margin-bottom: 5px;
       color: $primary-color;
@@ -12,9 +14,7 @@
       margin-bottom: 25px;
       text-align: center;
     }
-   }
-   
-   
+
    .main {
      display: flex;
      div {
@@ -31,5 +31,24 @@
       font-weight: 800;
       font-size: 1.1rem;
      }
-   }
+   } 
+
+  .categoryError{
+    margin-top: 20px;
+    color: $text-secondary-color;
+    font-size: 14px;
+  }
+
+  .categoryType{
+      margin-top: 20px;
+      color: $text-secondary-color;
+      font-size: 14px;
+    
+      span{
+        margin: 0 5px;
+        color: $text-secondary-color-two;
+      } 
+      
+  }
    
+}

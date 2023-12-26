@@ -1,6 +1,7 @@
 import { p2e, sp, e2p } from "@/utils/replaceNumber";
 import { useState , useEffect } from "react";
 import Num2persian from "num2persian";
+import { numberToWords , wordsToNumber , removeCommas } from "@persian-tools/persian-tools";
 import { validate } from "@/utils/validate";
 import styles from "@/module/TextInput.module.scss";
 
@@ -18,6 +19,7 @@ const TextInput = ({
   });
 
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
 
   useEffect(() => {
     setErrors(validate("AddProfilePage", profileData));
@@ -25,14 +27,21 @@ const TextInput = ({
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
+
+    const number = p2e(value);
+    console.log(number)
+
+    const persian = Num2persian(value);
+    console.log(persian)
+     
     switch (name) {
       case "price":
         setAllNumberPersion({
           ...numberPersion,
-          price: p2e(value),
-          priceletters: value.num2persian(),
+          price: number,
+          priceletters: persian,
         });
-        setProfileData({ ...profileData, [name]: p2e(value) });
+        setProfileData({ ...profileData, [name]: p2e(value)});
         break;
 
       case "phone":
@@ -46,18 +55,27 @@ const TextInput = ({
     }
   };
 
+  const focusHandler = (e) => {
+    const {name} = event.target;
+    setTouched({...touched,[name] : true})
+  }
+
   return (
     <div className={styles.container}>
       <p>{title}</p>
       <div className={styles.input}>
         {textarea ? (
-          <textarea
-            type="text"
-            name={name}
-            placeholder={title + " " + "را وارد کنید"}
-            value={profileData[name]}
-            onChange={changeHandler}
-          />
+          <>
+            <textarea
+              type="text"
+              name={name}
+              placeholder={title + " " + "را وارد کنید"}
+              value={profileData[name]}
+              onChange={changeHandler}
+              onFocus={focusHandler}
+            />
+            <span className={styles.error}>{touched[name]&&errors[name]}</span>
+          </>
         ) : (
           <>
             <input
@@ -70,14 +88,19 @@ const TextInput = ({
                   : profileData[name]
               }
               onChange={changeHandler}
+              onFocus={focusHandler}
             />
             {numberPersion.priceletters.length ? (
               <span className={styles.priceletters}>
                 {numberPersion.priceletters}
               </span>
             ) : (
-              <span className={styles.error}>{errors[name]}</span>
-            )}
+                  touched[name]?
+                  <span className={styles.error}>{errors[name]}</span>
+                  :
+                  <span className={styles.error}></span>
+                )
+              }
           </>
         )}
       </div>

@@ -89,6 +89,7 @@ const AddProfilePage = ({ data }) => {
       <div className={styles.main}>
         <div className={styles.sessionOne}>
           <RadioList
+            name = "category"
             profileData={profileData}
             setProfileData={setProfileData}
           />
