@@ -76,11 +76,19 @@
           margin: 10px 0;
         }
       }
+
+      .buttons{
+          justify-content: flex-end;
+      }
     }
    }
 
    @media (max-width : 600px) {
-    
+    .container{
+      .buttons{
+        justify-content: flex-end;
+      }
+    }
    }
   
   

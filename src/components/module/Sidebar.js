@@ -11,6 +11,7 @@ const Sidebar = () => {
         <BiSolidCategoryAlt />
         دسته بندی
       </p>
+      <div>
       <Link href="/buy-residential">همه</Link>
       {Object.keys(categories).map((i) => (
         <Link
@@ -22,6 +23,7 @@ const Sidebar = () => {
           {categories[i]}
         </Link>
       ))}
+      </div>
     </div>
   );
 };

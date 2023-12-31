@@ -24,7 +24,10 @@
 
     }
 
-    a {
+    div{
+      display: flex;
+      flex-direction: column;
+      a {
       color: rgb(255, 255, 255);
       margin: 7px 10px;
       padding: 5px 10px;
@@ -34,6 +37,35 @@
         color: $text-hover-color;
       }
     }
-     
+    }
+      
+   }
+
+   @media (max-width : 900px) {
+    .container{
+      div{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        a{
+          width: 20%;
+          text-align: center;
+        }
+      }
+    }
+   }
+
+   @media (max-width : 600px) {
+    .container{
+      div{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        a{
+          width: 20%;
+          text-align: center;
+        }
+      }
+    }
    }
    

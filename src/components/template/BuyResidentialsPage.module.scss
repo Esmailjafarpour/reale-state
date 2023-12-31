@@ -40,3 +40,30 @@
      border-radius: 10px;
      height: 50px;
    }
+
+   @media (max-width : 900px) {
+    .container{
+      flex-direction: column;
+      .sidebar{
+        width: 100%;
+      }
+      .main{
+        .card{
+          width: 49%;
+        }
+      }
+    }
+   }
+   @media (max-width : 600px) {
+    .container{
+      flex-direction: column;
+      .sidebar{
+        width: 100%;
+      }
+      .main{
+        .card{
+          width: 100%;
+        }
+      }
+    }
+   }
