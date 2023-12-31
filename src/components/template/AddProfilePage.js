@@ -166,20 +166,23 @@ const AddProfilePage = ({ data }) => {
           />
         </div>
 
-        <Toaster />
-        {loading ? (
-          <button className={styles.loader}>
-                  <Loader loading={loading} color={primaryColor} />
-          </button>
-        ) : data ? (
-          <button className={styles.submit} onClick={editHandler}>
-            ویرایش آگهی
-          </button>
-        ) : (
-          <button className={styles.submit} onClick={submitHandler}>
-            ثبت آگهی
-          </button>
-        )}
+        <div className={styles.buttons}>
+            {loading ? (
+              <button className={styles.loader}>
+                    <Loader loading={loading} color={primaryColor} />
+            </button>
+          ) : data ? (
+            <button className={styles.submit} onClick={editHandler}>
+              ویرایش آگهی
+            </button>
+          ) : (
+            <button className={styles.submit} onClick={submitHandler}>
+              ثبت آگهی
+            </button>
+          )}
+        </div>
+
+        <Toaster />        
       </div>
     </div>
   );

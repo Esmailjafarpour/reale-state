@@ -115,8 +115,14 @@
 
   } 
    
+
+  @media (max-width : 1200px) {
+    .first{
+      width: 85% !important;
+    }
+  }
    
-   @media (max-width: 600px) {
+   @media (max-width: 900px) {
      .header{
       display: flex;
       flex-direction: column;

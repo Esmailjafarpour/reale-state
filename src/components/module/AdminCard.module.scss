@@ -62,8 +62,25 @@
       }
       
     }
+   }
 
+   @media (max-width : 1200px) {
+    
+   }
 
+   @media (max-width : 900px) {
+    .container {
+      .properties{
+        flex-direction: column;
+        span{
+          margin: 10px 0;
+        }
+      }
+    }
+   }
+
+   @media (max-width : 600px) {
+    
    }
   
   

@@ -62,5 +62,15 @@
   }
 
   }
+
+  @media (max-width : 900px) {
+    .container{
+        h3{
+        width: 95% !important;
+        margin: 0 auto;
+      }
+    }
+   
+  }
    
    

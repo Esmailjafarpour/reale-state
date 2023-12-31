@@ -44,4 +44,17 @@
         margin-right: 10px;
       }
    }
+
+
+   @media (max-width : 1200px) {
+    .container{
+      width: 45%;
+    }
+   }
+   
+   @media (max-width : 900px) {
+    .container{
+      width: 100%;
+    }
+   }
    

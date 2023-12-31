@@ -1,8 +1,6 @@
 @import "../../app/variables.module.scss";
 .container {
 
-     margin-bottom: 40px;
-
     p {
       font-size: 1.1rem;
       margin-bottom: 5px;
@@ -51,4 +49,23 @@
       
   }
    
+}
+
+@media (max-width : 900px) {
+  .container{
+
+    .main{
+     justify-content: center;
+     div{
+      margin: 0 30px;
+     }
+    }
+
+    p{
+      width: 95%;
+      height: 40px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
 }

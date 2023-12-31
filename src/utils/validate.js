@@ -1,10 +1,16 @@
 const validate = (type, data) => {
+
   const errors = {};
 
   if (type === "AddProfilePage") {
+    
     if (!data.title.trim()) {
       errors.title = "عنوان آگهی را وارد کنید";
-    } else if (data.title.length < 3) {
+    } 
+    else if(typeof Number(data.title) === "number"){
+      errors.title = "مقدار غیر عددی وارد کنید"
+    }
+    else if (data.title.length < 3) {
       errors.title = "عنوان باید بیشتر از سه حرف باشد";
     }
 
@@ -19,6 +25,10 @@ const validate = (type, data) => {
     }
     if (!data.price) {
       errors.price = "قیمت را مشخص کنید";
+    }
+
+    if (data.price.length === 0) {
+      errors.price = "قیمتی را وارد کنید ";
     }
     if (!data.realState) {
       errors.realState = "مشاور املاک  مورد نظر خود را انتخاب کنید";
@@ -45,7 +55,7 @@ const validate = (type, data) => {
     }
 
     if (data.password.length < 6) {
-      errors.password = "رمز عبوری را تعین کنید";
+      errors.password = "رمز عبور طولانی تری را انتخاب کنید";
     }
 
     if (!data.rePassword) {

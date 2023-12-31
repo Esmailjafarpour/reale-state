@@ -25,4 +25,15 @@
     }
   }
    
+  @media (max-width : 900px) {
+    .container{
+      p{
+        width: 100%;
+      }
+      input{
+        margin: 10px auto;
+      }
+    }
+   
+  }
  

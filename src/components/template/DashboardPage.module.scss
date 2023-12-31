@@ -2,16 +2,18 @@
     .container{
       display: flex;
       flex-direction: column;
+      justify-content: center;
       h3 {
         color: #304ffe;
         font-weight: 400;
         font-size: 1.5rem;
-        margin-bottom: 20px;
+        margin: 10px auto;
         box-shadow: 0px -1px 6px 1px $box-shadow-color;
       }
       p {
         color: $secondary-color;
         box-shadow: 0px -1px 6px 1px $box-shadow-color;
+        margin: 10px auto;
       }
     }
 
@@ -25,6 +27,7 @@
      background-color:$bg-secondary-two ;
      color: $secondary-color;
      box-shadow: 0px -1px 6px 1px $box-shadow-color;
+     margin: 10px auto;
     p {
       margin: 0;
       font-weight: 400;

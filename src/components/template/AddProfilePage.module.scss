@@ -3,6 +3,7 @@
      display: flex;
      flex-direction: column;
      margin-bottom: 20px;
+     width: 100%;
      h3 {
       font-size: 1.1rem;
       font-weight: 400;
@@ -16,6 +17,7 @@
      }
      .main{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 14px;
       
@@ -71,7 +73,9 @@
       padding: 20px;
     }
 
-    .submit {
+    .buttons{
+      width: 100%;
+      .submit {
       border: none;
       width: 45%;
       height: 50px;
@@ -102,10 +106,64 @@
       transition: all ease-in 0.3s;
       margin: 14px auto;
      }
+    }
 
     }
     
    }
+
+
+
+   @media (max-width : 1200px) {
+    .container{
+      .sessionTwo,.sessionThree,.sessionFour,.sessionFive,.sessionSix,.sessionSeven{
+        width: 48.2% !important;
+      }
+      .buttons{
+        .submit{
+          display: flex;
+          justify-content: center;
+          width: 50% !important;
+          margin: 14px auto !important;
+          text-align: center;
+        }
+      }
+    }
+   }
+
+   @media (max-width : 900px) {
+    .container{
+      .sessionTwo,.sessionThree,.sessionFour,.sessionFive,.sessionSix,.sessionSeven{
+        width: 100% !important;
+      }
+      .buttons{
+        .submit{
+          display: flex;
+          justify-content: center;
+          width: 50% !important;
+          margin: 14px auto !important;
+          text-align: center;
+        }
+      }
+    }
+   }
+
+  //  @media (max-width : 600px) {
+  //   .container{
+  //     .sessionTwo,.sessionThree,.sessionFour,.sessionFive,.sessionSix,.sessionSeven{
+  //       width: 100% !important;
+  //     }
+  //     .buttons{
+  //       .submit{
+  //         display: flex;
+  //         justify-content: center;
+  //         width: 50% !important;
+  //         margin: 14px auto !important;
+  //         text-align: center;
+  //       }
+  //     }
+  //   }
+  //  }
    
    
    
