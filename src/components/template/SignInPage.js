@@ -58,6 +58,7 @@ const SigninPage = () => {
           onChange={changeHandler}
           form="signin"
           data={state}
+          showError={true}
         />
         <FormInput
           label="رمز عبور"
@@ -67,6 +68,7 @@ const SigninPage = () => {
           onChange={changeHandler}
           form="signin"
           data={state}
+          showError={true}
         />
         {state.loading ? (
           <div className={styles.loader}>

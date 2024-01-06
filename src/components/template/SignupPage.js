@@ -64,6 +64,7 @@ const SignupPage = () => {
             onChange={changeHandler}
             form="signup"
             data={state}
+            showError={true}
           />
         
         
@@ -75,6 +76,7 @@ const SignupPage = () => {
             onChange={changeHandler}
             form="signup"
             data={state}
+            showError={true}
           />
         
         
@@ -86,6 +88,7 @@ const SignupPage = () => {
             onChange={changeHandler}
             form="signup"
             data={state}
+            showError={true}
           />
         
 

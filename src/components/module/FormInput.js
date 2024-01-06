@@ -10,6 +10,7 @@ const FormInput = ({
   placeholder,
   data,
   form,
+  showError
 }) => {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
@@ -36,11 +37,17 @@ const FormInput = ({
         placeholder={placeholder}
         onFocus={foucusHandler}
       />
-      {errors[name] && touched[name] ? (
-        <span className={styles.error}>{errors[name]}</span>
-      ) : (
-        <span className={styles.error}></span>
-      )}
+
+      {showError?
+        errors[name] && touched[name] ? (
+          <span className={styles.error}>{errors[name]}</span>
+        ) : (
+          <span className={styles.error}></span>
+        )
+      :
+          null
+      }
+      
     </div>
   );
 };

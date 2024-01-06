@@ -4,9 +4,10 @@ import { sp } from "@/utils/replaceNumber";
 import { useRouter } from "next/navigation";
 import { BiCheckShield } from "react-icons/bi";
 import { RiDeleteBinFill } from "react-icons/ri";
+import Image from "next/image";
 import styles from "@/module/AdminCard.module.scss";
 
-const AdminCard = ({ data: { _id, title, description, price, location } }) => {
+const AdminCard = ({ data: { _id, title, description, price, location , category } }) => {
   const router = useRouter();
   const publishHandler = async () => {
     const res = await fetch(`/api/profile/publish/${_id}`, { method: "PATCH" });
@@ -28,12 +29,27 @@ const AdminCard = ({ data: { _id, title, description, price, location } }) => {
 
   return (
     <div className={styles.container}>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <div className={styles.properties}>
-        <span>{location}</span>
-        <span>{sp(price)}</span>
+      <div className={styles.main}>
+        <div className={styles.description}>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <div className={styles.properties}>
+            <span>{location}</span>
+            <span>{sp(price)}</span>
+          </div>
+        </div>
+        <div className={styles.img}>
+        <Image
+          src={`/images/${category}.png`}
+          alt={title}
+          width={230}
+          height={140}
+          priority={true}
+        />
+        </div>
       </div>
+      
+      
       <div className={styles.buttons}>
         <button onClick={publishHandler}>
           انتشار آگهی 

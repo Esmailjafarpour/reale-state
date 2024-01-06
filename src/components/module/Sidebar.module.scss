@@ -28,11 +28,12 @@
       display: flex;
       flex-direction: column;
       a {
-      color: rgb(255, 255, 255);
+      color: $secondary-color;
       margin: 7px 10px;
       padding: 5px 10px;
-      background-color: $secondary-color-two;
+      background-color: $bg-secondary-four;
       border-radius: 8px;
+      font-weight: 500;
       &:hover{
         color: $text-hover-color;
       }

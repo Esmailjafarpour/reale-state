@@ -1,33 +1,51 @@
 @import "../../app//variables.module.scss";
 .container {
-     border: 2px solid $bg-secondary;
+    border: 2px solid $bg-secondary;
      padding: 20px;
      margin-bottom: 40px;
      border-radius: 8px;
-
-     h3 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: $secondary-color;
-      margin-bottom: 20px;
+  .main{
+    display: flex;
+    justify-content: space-between;
+    .description{
+      width: 70%;
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $secondary-color;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        text-align: justify;
+        margin-bottom: 20px;
+      }
+  
+      .properties {
+        display: flex;
+        margin-bottom: 20px;
+        span {
+         background-color: $bg-secondary-three;
+         color: $primary-color;
+         padding: 5px 10px;
+         margin-left: 15px;
+         border-radius: 5px;
+       }
+      }
     }
 
-    p {
-      text-align: justify;
-      margin-bottom: 20px;
+    .img{
+      border-radius: 8px;
+      width: fit-content;
+      overflow: hidden;
+      height: 140px;
+      box-shadow: 0px 0px 8px $box-shadow-color;
     }
 
-    .properties {
-      display: flex;
-      margin-bottom: 20px;
-      span {
-       background-color: $bg-secondary-three;
-       color: $primary-color;
-       padding: 5px 10px;
-       margin-left: 15px;
-       border-radius: 5px;
-     }
-    }
+  }
+     
+
+    
 
     .buttons {
       display: flex;
@@ -70,12 +88,28 @@
 
    @media (max-width : 900px) {
     .container {
+      .main{
+        display: flex;
+        flex-direction: column-reverse;
+      .description{
+        margin: 5px auto;
+        h3{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
       .properties{
         flex-direction: column;
         span{
           margin: 10px 0;
         }
       }
+    }
+    .img{
+        margin: 5px auto;
+    }
+    }
 
       .buttons{
           justify-content: flex-end;
@@ -85,6 +119,23 @@
 
    @media (max-width : 600px) {
     .container{
+      .main{
+        display: flex;
+        flex-direction: column-reverse;
+      .description{
+        margin: 5px auto;
+        h3{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+      }
+
+      .img{
+        margin: 5px auto;
+      }
+    }
       .buttons{
         justify-content: flex-end;
       }
