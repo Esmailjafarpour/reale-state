@@ -1,7 +1,7 @@
 import BuyResidentialsPage from "@/template/BuyResidentialsPage";
 
 const BuyResidentials = async({searchParams}) => {
-     console.log(searchParams)
+     console.log("searchParams",searchParams)
      const res = await fetch("http://localhost:3000/api/profile/",{catch : "no-store"});
      const data = await res.json();
      if (data.error) return <h3>{data.error}</h3>
@@ -9,7 +9,7 @@ const BuyResidentials = async({searchParams}) => {
      if(searchParams.category) {
           finalData = finalData.filter((profile) => (profile.category === searchParams.category))
      }
-     return <BuyResidentialsPage data={finalData}/>
+     return <BuyResidentialsPage data={finalData} searchParams={searchParams}/>
 }
 
 export default BuyResidentials;

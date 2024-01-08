@@ -15,14 +15,21 @@ const validate = (type, data) => {
     }
 
     if (!data.category) {
-      errors.category = "یک دسته بندی راانتخاب کنید";
+      errors.category = "یک دسته بندی برای آگهی خود انتخاب می کنید؟";
     }
+
+    if (!data.typeofnotice) {
+      errors.typeofnotice = "نوع آگهی خود را مشخص می کنید؟";
+    }
+
     if (!data.phone) {
       errors.phone = "شماره تماس را مشخص کنید";
     }
+
     if (!data.location) {
       errors.location = "آدرس تقریبی ملک مورد نظر را مشخص کنید";
     }
+
     if (!data.price) {
       errors.price = "قیمت را مشخص کنید";
     }
@@ -30,12 +37,15 @@ const validate = (type, data) => {
     if (data.price.length === 0) {
       errors.price = "قیمتی را وارد کنید ";
     }
+
     if (!data.realState) {
       errors.realState = "مشاور املاک  مورد نظر خود را انتخاب کنید";
     }
+
     if (!data.description) {
       errors.description = "توضیحات مختصری را برای آگهی خود بنویسید";
     }
+
   }
 
   if (type === "signup") {

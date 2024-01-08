@@ -33,12 +33,18 @@
    }
    
    .text {
-     background-color: rgba(219, 5, 5, 0.159);
-     color: rgb(219, 5, 5);
-     font-size: 1.3rem;
-     padding: 10px 15px;
-     border-radius: 10px;
-     height: 50px;
+    background-color: $bg-secondary-two;
+    color: $secondary-color;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    height: 50px;
+    margin: auto;
+    box-shadow: 0px 0px 16px $box-shadow-color;
+
+    span{
+      margin: 0 5px;
+    }
    }
 
    @media (max-width : 900px) {

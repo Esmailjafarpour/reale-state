@@ -15,6 +15,7 @@ const Header = () => {
   const [searchInput, setSearchInput] = useState("");
 
   const changeHandler = (e) => {
+    console.log("pppp",e.target.value)
     setSearchInput(e.target.value);
   };
 

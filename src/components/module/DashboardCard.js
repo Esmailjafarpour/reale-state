@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { RiDeleteBinFill } from "react-icons/ri";
-
 import { FiEdit } from "react-icons/fi";
 import { toast, Toaster } from "react-hot-toast";
 import Loader from "@/module/Loader";

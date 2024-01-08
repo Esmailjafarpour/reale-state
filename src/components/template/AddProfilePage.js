@@ -20,6 +20,7 @@ const AddProfilePage = ({ data }) => {
     realState: "",
     constructionDate: new Date(),
     category: "",
+    typeofnotice :"",
     rules: [],
     amenities: [],
   });
@@ -90,6 +91,13 @@ const AddProfilePage = ({ data }) => {
         <div className={styles.sessionOne}>
           <RadioList
             name = "category"
+            profileData={profileData}
+            setProfileData={setProfileData}
+          />
+        </div>
+        <div className={styles.sessionOne}>
+          <RadioList
+            name = "typeOfNotice"
             profileData={profileData}
             setProfileData={setProfileData}
           />

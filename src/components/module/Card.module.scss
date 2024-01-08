@@ -7,6 +7,7 @@
     background-color:$bg-secondary-six;
     overflow: hidden;
     width: 100%;
+    box-shadow: -5px 8px 8px $box-shadow-color-two;
 
     span {
       color: $secondary-color-two;
@@ -66,6 +67,7 @@
      font-size: 0.9rem;
      height: 26px;
      overflow: hidden;
+     margin-top: 25px;
       svg {
           margin-left: 5px;
           font-size: 1rem;
