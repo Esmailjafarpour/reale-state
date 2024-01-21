@@ -29,7 +29,7 @@ const AddProfilePage = ({ data }) => {
     if (data) {
       setProfileData(data);
     }
-  }, []);
+  }, [data]);
 
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -57,6 +57,7 @@ const AddProfilePage = ({ data }) => {
         realState: "",
         constructionDate: new Date(),
         category: "",
+        typeofnotice :"",
         rules: [],
         amenities: [],
       })

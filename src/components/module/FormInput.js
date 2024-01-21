@@ -17,14 +17,13 @@ const FormInput = ({
 
   useEffect(() => {
     setErrors(validate(form, data));
-  }, [data]);
+  }, [data,form]);
 
   const foucusHandler = (e) => {
     const { name, value } = e.target;
     setTouched({ ...touched, [name]: true });
   };
 
-  console.log("errors", errors);
   return (
     <div className={styles.formInput}>
       <label htmlFor={name}>{label}</label>

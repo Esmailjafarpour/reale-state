@@ -85,7 +85,7 @@ const TextInput = ({
               placeholder={title + " " + "را وارد کنید"}
               value={
                 name === "price" || name === "phone"
-                  ? numberPersian[name]
+                  ? name === "price" ? numberPersian["price"] : numberPersian["phone"]
                   : profileData[name]
               }
               onChange={changeHandler}

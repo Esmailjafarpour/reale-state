@@ -60,7 +60,7 @@
     box-shadow: 0px 0px 5px $secondary-color;
    }
    
-   .location {
+   .location , .adType {
      display: flex;
      color: $secondary-color-two;
      font-weight: 400;
@@ -73,6 +73,12 @@
           font-size: 1rem;
           color: $bg-secondary;
       }
+   }
+
+   .adType{
+ span{
+  margin: 0 1px;
+ }
    }
    
   

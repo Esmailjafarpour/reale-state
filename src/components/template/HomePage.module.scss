@@ -28,7 +28,7 @@
     li {
       display: flex;
       align-items: center;
-      width: 80px;
+      width: 91px;
       margin: 10px;
       background-color: rgb(108, 34, 235);
       padding: 5px 10px;
@@ -38,13 +38,22 @@
       font-weight: 600;
       justify-content: space-around;
       cursor: pointer;
+      a{ 
+        font-weight: 400;
+        margin-right: 5px;
+        height: 20px;
+        color: $bg-primary;
+        display: flex;
+        align-items: center;
+        span{
+          margin: 10px;
+          display: flex;
+        }
+      }
+    
      }
 
-     span {
-      font-weight: 400;
-      margin-right: 5px;
-      height: 20px;
-    }
+    
    }
     
   

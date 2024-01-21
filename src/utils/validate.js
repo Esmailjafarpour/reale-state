@@ -7,9 +7,9 @@ const validate = (type, data) => {
     if (!data.title.trim()) {
       errors.title = "عنوان آگهی را وارد کنید";
     } 
-    else if(typeof Number(data.title) === "number"){
-      errors.title = "مقدار غیر عددی وارد کنید"
-    }
+    // else if(typeof(data.title) === "number"){
+    //   errors.title = "مقدار غیر عددی وارد کنید"
+    // }
     else if (data.title.length < 3) {
       errors.title = "عنوان باید بیشتر از سه حرف باشد";
     }

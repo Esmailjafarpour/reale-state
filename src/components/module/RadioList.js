@@ -111,19 +111,6 @@ const RadioList = ({ name, profileData, setProfileData }) => {
             </div>
 
             <div>
-              <label htmlFor="buy">خرید</label>
-              <input
-                type="radio"
-                id="buy"
-                value="buy"
-                name="typeofnotice"
-                onChange={changeHandler}
-                checked={typeofnotice === "buy"}
-                onFocus={focusHandler}
-              />
-            </div>
-
-            <div>
               <label htmlFor="mortgage">رهن</label>
               <input
                 type="radio"

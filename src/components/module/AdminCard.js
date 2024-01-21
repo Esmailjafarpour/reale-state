@@ -4,10 +4,11 @@ import { sp } from "@/utils/replaceNumber";
 import { useRouter } from "next/navigation";
 import { BiCheckShield } from "react-icons/bi";
 import { RiDeleteBinFill } from "react-icons/ri";
+import { categories, services } from "@/constants/strings";
 import Image from "next/image";
 import styles from "@/module/AdminCard.module.scss";
 
-const AdminCard = ({ data: { _id, title, description, price, location , category } }) => {
+const AdminCard = ({ data: { _id, title, description, price, location , category ,typeofnotice } }) => {
   const router = useRouter();
   const publishHandler = async () => {
     const res = await fetch(`/api/profile/publish/${_id}`, { method: "PATCH" });
@@ -33,6 +34,7 @@ const AdminCard = ({ data: { _id, title, description, price, location , category
         <div className={styles.description}>
           <h3>{title}</h3>
           <p>{description}</p>
+          <p>{services[typeofnotice]}</p>
           <div className={styles.properties}>
             <span>{location}</span>
             <span>{sp(price)}</span>

@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { FiCircle } from "react-icons/fi";
 import { FaCity } from "react-icons/fa";
-import CategoryCard from "@/module/CategoryCard";
 import { cities, services, categories } from "@/constants/strings";
 import { icons } from "@/constants/icons";
-import styles from "@/template/HomePage.module.scss";
+import CategoryCard from "@/module/CategoryCard";
 import variables  from "@/app/variables.module.scss";
+import styles from "@/template/HomePage.module.scss";
 
 const HomePage = () => {
   return (
@@ -15,10 +16,18 @@ const HomePage = () => {
           <ul>
             {Object.keys(services).map((i) => (
               <li key={i}>
-                {services[i]}
-                <span>
-                  {icons[i]}
-                </span>
+                  <Link href={{
+                     pathname: "/buy-residential",
+                     query: { category: i },
+                  }}>
+                    <span>
+                     {services[i]}
+                    </span>
+                    <span>
+                      {icons[i]}
+                    </span>
+                  </Link>
+                
               </li>
             ))}
           </ul>

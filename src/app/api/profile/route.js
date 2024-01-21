@@ -35,6 +35,7 @@ export async function POST(req) {
       realState,
       constructionDate,
       category,
+      typeofnotice,
       rules,
       amenities,
     } = body;
@@ -65,7 +66,9 @@ export async function POST(req) {
       !price ||
       !realState ||
       !constructionDate ||
-      !category
+      !category||
+      !typeofnotice
+
     ) {
       return NextResponse.json(
         { error: "لطفااطلاعات صحیح را وارد کنید" },
@@ -81,6 +84,7 @@ export async function POST(req) {
       realState,
       constructionDate,
       category,
+      typeofnotice,
       rules,
       amenities,
       price: +price,
@@ -115,6 +119,7 @@ export async function PATCH(req) {
       realState,
       constructionDate,
       category,
+      typeofnotice,
       amenities,
       rules,
     } = body;
@@ -143,7 +148,8 @@ export async function PATCH(req) {
       !price,
       !realState,
       !constructionDate,
-      !category
+      !category,
+      !typeofnotice
     ) {
       return NextResponse.json(
         { error: "لطفا اطلاعات معتبر وارد کنید" },
@@ -165,6 +171,7 @@ export async function PATCH(req) {
     profile.realState = realState; 
     profile.constructionDate = constructionDate; 
     profile.category = category; 
+    profile.typeofnotice = typeofnotice;
     profile.amenities = amenities;  
     profile.rules = rules; 
     profile.save();

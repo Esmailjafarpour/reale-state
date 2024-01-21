@@ -34,6 +34,11 @@ const profileSchema = new Schema({
           enum : ["villa","apartment","store","office"],
           required : true
      },
+     typeofnotice : {
+          type : String,
+          enum : ["sale","mortgage","Rent"],
+          required : true
+     },
      amenities : {
           type : [String],
           default : []

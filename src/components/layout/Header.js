@@ -1,30 +1,61 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import FormInput from "@/module/FormInput";
 import { FiLogIn } from "react-icons/fi";
-import styles from "@/layout/Header.module.scss";
 import { useSession } from "next-auth/react";
 import { FaUserAlt } from "react-icons/fa";
 import { SiHomebridge } from "react-icons/si";
-import FormInput from "@/module/FormInput";
 import { FaSearch } from "react-icons/fa";
-import { services, cities, categories } from "@/constants/strings";
+import { services, cities, categories , servicesPersian , categoriesPersian } from "@/constants/strings";
+import { toast, Toaster } from "react-hot-toast";
+import Link from "next/link";
+import styles from "@/layout/Header.module.scss";
 
 const Header = () => {
   const { data } = useSession();
   const [searchInput, setSearchInput] = useState("");
+  const router = useRouter();
 
   const changeHandler = (e) => {
-    console.log("pppp",e.target.value)
+    console.log("changeHandler",e.target.value)
     setSearchInput(e.target.value);
   };
 
   const searchHandler = () => {
-    const servicekey = Object.values(services);
-    const categorykey = Object.values(categories);
-    const categoryResult = categorykey.find((i) => i === searchInput);
-    const serviceResult = servicekey.find((i) => i === searchInput);
-    console.log(categoryResult, serviceResult);
+    const serviceKeys = Object.keys(services);
+    const categoryKeys = Object.keys(categories);
+
+    const serviceValue = Object.values(services);
+    const categoryValue = Object.values(categories);
+
+    // console.log("serviceKeys",serviceKeys)
+    // console.log("serviceValue",serviceValue)
+    const resultSearch = serviceKeys[serviceValue.indexOf(searchInput)] || categoryKeys[categoryValue.indexOf(searchInput)]
+    const categoryResult = categoryKeys.find((i) => i === searchInput);
+    const serviceResult = serviceKeys.find((i) => i === searchInput);
+  
+    if (!searchInput) {
+      toast.error("موردی را برای جستجو بنویسید");
+      setSearchInput("")
+      return;
+    }
+
+    if (resultSearch) {
+      router.push(`/buy-residential?category=${resultSearch.toString()}`)
+      toast.success("کمی صبر کنید");
+      setSearchInput("")
+      return
+    }
+
+    if (!categoryResult && !serviceResult) {
+      toast.success("برای جستجو از کلمات ویلا ،آپارتمان ،مغازه ، دفتر استفاده کنید");
+      toast.success("برای جستجو از کلمات خرید ،فروش ،رهن ، اجاره استفاده کنید");
+      toast.error("مورد مورد نظر شما یافت نشد");
+      setSearchInput("")
+      return;
+    }
+
   };
 
   return (
@@ -72,6 +103,7 @@ const Header = () => {
           </Link>
         </div>
       )}
+      <Toaster />
     </header>
   );
 };
