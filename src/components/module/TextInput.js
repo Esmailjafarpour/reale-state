@@ -13,8 +13,8 @@ const TextInput = ({
   textarea = false,
 }) => {
   const [numberPersian, setAllNumberPersian] = useState({
-    price: "",
-    phone: "",
+    price: profileData.price,
+    phone: profileData.phone,
     priceletters: "",
   });
 
@@ -23,6 +23,8 @@ const TextInput = ({
 
   useEffect(() => {
     setErrors(validate("AddProfilePage", profileData));
+    console.log("profileData.price",profileData.price)
+    console.log("profileData.phone",profileData.phone)
   }, [profileData]);
 
   const changeHandler = (e) => {
