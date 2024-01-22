@@ -35,6 +35,7 @@ const AddProfilePage = ({ data }) => {
   const router = useRouter();
 
   const submitHandler = async () => {
+    setProfileData({...profileData,price : profileData.price.replace(/,/g, "")})
     setLoading(true);
     const res = await fetch("/api/profile", {
       method: "POST",
@@ -61,8 +62,8 @@ const AddProfilePage = ({ data }) => {
         rules: [],
         amenities: [],
       })
+      router.replace("/dashboard/my-profiles");
       router.refresh();
-      // router.replace("/dashboard/my-profiles");
     }
   };
 

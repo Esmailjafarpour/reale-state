@@ -1,7 +1,10 @@
   @import "../../app/variables.module.scss";
   .container {
     border: 2px solid $secondary-color;
-    border-radius: 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 8px;
     padding: 10px;
     margin-bottom: 20px;
     background-color:$bg-secondary-six;
@@ -67,7 +70,7 @@
      font-size: 0.9rem;
      height: 26px;
      overflow: hidden;
-     margin-top: 25px;
+     margin-top: 15px;
       svg {
           margin-left: 5px;
           font-size: 1rem;
@@ -76,6 +79,7 @@
    }
 
    .adType{
+      margin-top: 6px;
       span{
         margin: 0 1px;
       }

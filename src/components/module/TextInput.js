@@ -13,8 +13,8 @@ const TextInput = ({
   textarea = false,
 }) => {
   const [numberPersian, setAllNumberPersian] = useState({
-    price: profileData.price,
-    phone: profileData.phone,
+    price: "",
+    phone:"",
     priceletters: "",
   });
 
@@ -42,7 +42,7 @@ const TextInput = ({
           price: strSeparated,
           priceletters: persian,
         });
-        setProfileData({ ...profileData, [name]: p2e(value) });
+        setProfileData({ ...profileData, [name]: p2e(strSeparated) });
         break;
 
       case "phone":
@@ -87,7 +87,7 @@ const TextInput = ({
               placeholder={title + " " + "را وارد کنید"}
               value={
                 name === "price" || name === "phone"
-                  ? name === "price" ? numberPersian["price"] : numberPersian["phone"]
+                  ? name === "price" ? profileData["price"] : profileData["phone"]
                   : profileData[name]
               }
               onChange={changeHandler}
