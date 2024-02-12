@@ -8,7 +8,6 @@ const BuyResidentials = async({searchParams}) => {
      const data = await res.json();
      if (data.error) return <h3>{data.error}</h3>
      let finalData = data.data;
-     console.log("searchParamsCategory",searchParams.category)
      if(searchParams.category) {
           finalData = finalData.filter((profile) => 
           categories[searchParams.category]?
