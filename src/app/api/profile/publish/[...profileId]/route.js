@@ -8,7 +8,6 @@ export async function PATCH(req , context) {
   try {
     await connectDB();
     const id = context.params.profileId;
-    console.log("id",id)
     const session = await getServerSession(req);
     if (!session)
       return NextResponse.json(
@@ -30,7 +29,6 @@ export async function PATCH(req , context) {
 
     return NextResponse.json({ message: "آگهی منتشر شد" }, { status: 200 });
   } catch (error) {
-    console.log(error);
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }

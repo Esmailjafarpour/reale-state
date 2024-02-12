@@ -7,7 +7,6 @@ export async function POST(req) {
   try {
     await connectDB();
     const { email, password } = await req.json();
-    console.log({ email, password });
     if (!email || !password) {
       return NextResponse.json(
         { error: "اطلاعات را درست وارد کنید" },
@@ -16,7 +15,6 @@ export async function POST(req) {
     }
 
     const existingUser = await User.findOne({ email });
-    console.log("existingUser", existingUser);
     if (existingUser) {
       return NextResponse.json(
         { error: "این حساب کاربری از قبل وجود دارد" },
@@ -31,13 +29,11 @@ export async function POST(req) {
       password: hashedPassword,
     });
 
-    console.log("newUser", newUser);
     return NextResponse.json(
       { message: "حساب کاربری ایجاد شد" },
       { status: 201 }
     );
   } catch (error) {
-    console.log("error in the api signup",error);
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }

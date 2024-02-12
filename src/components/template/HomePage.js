@@ -27,7 +27,6 @@ const HomePage = () => {
                       {icons[i]}
                     </span>
                   </Link>
-                
               </li>
             ))}
           </ul>

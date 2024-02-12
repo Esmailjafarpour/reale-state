@@ -17,10 +17,13 @@
         justify-content: flex-start;
         width: 75%;
        .logo {
-          color: $primary-color;
-          font-size: 45px;
-          height: 46px;
-          cursor: pointer;
+        font-size: 45px;
+        height: 46px;
+        cursor: pointer;
+          a{
+            color: $primary-color;
+            
+          } 
         }
 
         .Meno{

@@ -28,7 +28,6 @@ export async function DELETE(req , context){
           return NextResponse.json({message : "آگهی با موفقیت حذف شد"},{status : 201})
 
      } catch (error) {
-          console.log("error from delete api",error)
           return NextResponse.json({error : "مشکلی در سرور رخ داده است"},{status : 500})
      }
 }

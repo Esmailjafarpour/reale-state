@@ -18,7 +18,6 @@ const Header = () => {
   const router = useRouter();
 
   const changeHandler = (e) => {
-    console.log("changeHandler",e.target.value)
     setSearchInput(e.target.value);
   };
 
@@ -29,8 +28,6 @@ const Header = () => {
     const serviceValue = Object.values(services);
     const categoryValue = Object.values(categories);
 
-    // console.log("serviceKeys",serviceKeys)
-    // console.log("serviceValue",serviceValue)
     const resultSearch = serviceKeys[serviceValue.indexOf(searchInput)] || categoryKeys[categoryValue.indexOf(searchInput)]
     const categoryResult = categoryKeys.find((i) => i === searchInput);
     const serviceResult = serviceKeys.find((i) => i === searchInput);
@@ -45,7 +42,7 @@ const Header = () => {
       router.push(`/buy-residential?category=${resultSearch.toString()}`)
       toast.success("کمی صبر کنید");
       setSearchInput("")
-      return
+      return;
     }
 
     if (!categoryResult && !serviceResult) {
@@ -62,7 +59,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.first}>
         <div className={styles.logo}>
-          <SiHomebridge />
+        <Link href="/"><SiHomebridge /></Link>
         </div>
 
         <div className={styles.Meno}>

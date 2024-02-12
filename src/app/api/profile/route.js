@@ -16,7 +16,6 @@ export async function GET(req){
       { status: 201 , data : profile }
     );
   } catch (error) {
-    console.log("error from Get api",error)
     return NextResponse.json({error : "مشکلی در سرور رخ داده است"},{status : 500})
   }
 }
@@ -25,7 +24,6 @@ export async function POST(req) {
   try {
     await connectDB();
     const body = await req.json();
-    console.log("body profile api", body);
     const {
       title,
       description,
@@ -41,7 +39,6 @@ export async function POST(req) {
     } = body;
 
     const session = await getServerSession(req);
-    console.log("session profile api", session);
     if (!session) {
       return NextResponse.json(
         { error: "لطفا وارد حساب کاربری خود شوید" },
@@ -50,7 +47,6 @@ export async function POST(req) {
     }
 
     const user = await User.findOne({ email: session.user.email });
-    console.log("user", user);
     if (!user) {
       return NextResponse.json(
         { error: "لطفا حساب کاربری خود را ایجاد کنید" },
@@ -90,14 +86,12 @@ export async function POST(req) {
       price: +price,
       userId: new Types.ObjectId(user._id),
     });
-    console.log("newProfile", newProfile);
 
     return NextResponse.json(
       { message: "آگهی جدید اضافه شد" },
       { status: 201 }
     );
   } catch (error) {
-    console.log("error from profile api", error);
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }
@@ -177,7 +171,6 @@ export async function PATCH(req) {
     profile.save();
     return NextResponse.json({message : "آگهی با موفقیت ویرایش شد"},{status : 200})
   } catch (error) {
-    console.log("error profile edit", error);
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }

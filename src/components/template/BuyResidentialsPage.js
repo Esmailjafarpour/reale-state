@@ -4,8 +4,10 @@ import { categories, services } from "@/constants/strings";
 import styles from "@/template/BuyResidentialsPage.module.scss";
 
 const BuyResidentialsPage = ({ data, searchParams }) => {
+
   return (
     <div className={styles.container}>
+      
       <div className={styles.sidebar}>
         <Sidebar />
       </div>
@@ -15,7 +17,7 @@ const BuyResidentialsPage = ({ data, searchParams }) => {
             categories[searchParams.category] || services[searchParams.category]
           } وجود ندارد`}</p>
         )}
-        {data.map((profile) => (
+        {data.length && data.map((profile) => (
           <div key={profile._id} className={styles.card}>
             <Card key={profile._id} data={profile} />
           </div>

@@ -7,7 +7,6 @@ const CustomDatePicker = ({ profileData, setProfileData }) => {
 
      const changeHandler = (e) => {
           const date = new Date(e);
-          console.log(date)
           setProfileData({
                ...profileData,
                constructionDate : date
